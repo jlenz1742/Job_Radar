@@ -148,18 +148,23 @@ voller Historie und ohne dass jemand sie bauen muss.
   kein laufendes "N neue Jobs"-Digest — falls das Format davon abweicht,
   Mail dazulegen statt zu raten. `radar.yml` (Actions) ruft es schon auf,
   aber ungetestet, siehe README-Abschnitt "Actions".
-- **Karriereseiten- und jobs.ch-Abruf ist jetzt automatisiert** (`abruf.py`,
-  siehe README) — kein Agent mehr nötig für Schritt 2-4 der alten
-  Übergabe. Der Playwright-Pfad (14 JS-only-Firmen) ist nur ausserhalb
-  dieser Sandbox getestet (siehe README, Abschnitt "Bekannte Lücke") —
-  `tools/test_js_lokal.py` einmal lokal laufen lassen, bevor du dich drauf
-  verlässt. Nach zwei Nachbesserungsrunden an der Extraktions-Heuristik
-  (SmartRecruiters-Job-IDs mitten im Pfad, Titel in Ueberschrift statt im
-  Link, Solique-Style relative Hrefs, "Job Coach"-Plattformwidget als
-  Fehltreffer) bleiben nur noch 4 von 89 Quellen mit Fehler: Hitachi
-  Energy/Hilti (HTTP 403, Bot-Abwehr), Swatch Group (Timeout), Kistler
-  (rendert nur sporadisch serverseitig — meist 0 Treffer, echtes
-  Playwright waere hier der naechste Schritt).
+- **Karriereseiten- und jobs.ch-Abruf laeuft jetzt komplett über GitHub
+  Actions** (`.github/workflows/radar.yml`, werktags 07:00 Schweizer Zeit
+  + `workflow_dispatch` für manuelle Läufe) — kein Agent mehr nötig für
+  Schritt 2-4 der alten Übergabe, und kein lokaler Rechner mehr nötig.
+  Zwei echte Action-Läufe am 10.09. bestätigt: **Playwright funktioniert
+  auf dem GitHub-Runner einwandfrei** (die Sandbox-Einschränkung mit dem
+  Session-Proxy betrifft nur die Entwicklungsumgebung, nicht Actions) —
+  11 der 15 JS-only-Firmen liefern damit echte Treffer.
+  Verbleibende, dauerhaft kaputte Quellen stehen in
+  `daten/bekannte_fehler.txt` und lassen die Action nicht mehr täglich rot
+  werden — nur eine NEUE, unbekannte Fehlerquelle tut das (Regel 4 bleibt
+  gewahrt: ein *neuer* stiller Ausfall fällt weiterhin auf). Aktuell 6-9
+  Firmen dort (schwankt je Lauf): Hitachi Energy/Hilti (HTTP 403),
+  Swatch/Garmin (Timeout, wechselnd), STMicroelectronics/Endress+Hauser/
+  Geberit/Baumer (0 Treffer nach Rendern+Scrollen trotz Cookie-Fix —
+  vermutlich Bot-Detection auf Headless-Chrome, nicht generisch lösbar),
+  Kistler (rendert nur sporadisch serverseitig).
 - Priorisierung läuft jetzt über `daten/Zielliste_CH_Industrie.xlsx`
   (Spalte Prio) + `python tools/sync_quellen.py` — nicht mehr `quellen.json`
   von Hand editieren, das wird komplett überschrieben.

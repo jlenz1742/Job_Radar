@@ -52,10 +52,33 @@ jobs:
           git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d)"
           git push
 
-      # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen.
-      # Stilles Nichtstun ist der gefaehrlichste Fehlerfall.
+      # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen -- aber nur
+      # bei NEUEN Fehlern. Ein paar Quellen sind dauerhaft durch Bot-Abwehr
+      # blockiert (daten/bekannte_fehler.txt); die taeglich erneut rot zu
+      # melden waere genau das stille Wegklicken, das Regel 4 verhindern
+      # soll. Nur eine Quelle, die NICHT auf der Liste steht, ist ein
+      # echtes neues Signal.
       - name: Quellen-Waechter
         run: |
           echo "--- Fehlerhafte Quellen dieses Laufs ---"
           grep '!!' abruf.log || echo "(keine)"
-          ! grep -q '!!' abruf.log
+
+          bekannt() {
+            grep -vE '^\s*#|^\s*$' daten/bekannte_fehler.txt | grep -qxF "$1"
+          }
+
+          neu=0
+          while IFS= read -r zeile; do
+            quelle="${zeile#*!!   }"
+            quelle="${quelle%%:*}"
+            if ! bekannt "$quelle"; then
+              echo "NEU (nicht in bekannte_fehler.txt): $zeile"
+              neu=1
+            fi
+          done < <(grep '!!' abruf.log || true)
+
+          if [ "$neu" = "1" ]; then
+            echo "--- Mindestens eine neue, unbekannte Fehlerquelle -- Lauf schlaegt fehl. ---"
+            exit 1
+          fi
+          echo "Keine neuen Fehler -- nur bereits bekannte Bot-Abwehr-Faelle (siehe daten/bekannte_fehler.txt)."

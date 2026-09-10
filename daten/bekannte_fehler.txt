@@ -1,0 +1,32 @@
+# Quellen, deren Fehler bekannt und (Stand jetzt) nicht generisch loesbar
+# sind -- meist Bot-Abwehr, nicht Struktur-Aenderung. Der Quellen-Waechter
+# in .github/workflows/radar.yml laesst die Action deshalb nur rot werden,
+# wenn eine Quelle scheitert, die NICHT in dieser Liste steht.
+#
+# Format: eine Quelle pro Zeile, exakt wie radar.py sie im Alarm nennt
+# (Firma + Klammer-Zusatz), z.B. "Hitachi Energy (Karriereseite)". Kein
+# Text nach dem Namen -- Kommentare in eigenen Zeilen, sonst matcht der
+# Waechter nicht.
+#
+# Ein Eintrag hier heisst nicht "fuer immer ok" -- steht eine Quelle
+# laenger als ein paar Wochen hier ohne dass jemand nachgeschaut hat,
+# lohnt sich ein neuer Blick. Entfernen, sobald eine Quelle wieder
+# zuverlaessig liefert -- dann faellt ein erneutes Scheitern wieder auf.
+
+# HTTP 403, Bot-Abwehr
+Hitachi Energy (Karriereseite)
+Hilti (Karriereseite)
+
+# Timeout, wechselnd (mal ok, mal nicht -- vermutlich Rate-Limiting)
+Swatch Group (Karriereseite)
+Garmin (Karriereseite)
+
+# Nach Rendern+Scrollen weiterhin 0 Treffer trotz Cookie-Fix,
+# vermutlich Bot-Detection auf Headless-Chrome statt reinem Cookie-Banner
+STMicroelectronics (Karriereseite)
+Endress+Hauser (Karriereseite)
+Geberit (Karriereseite)
+Baumer Group (Karriereseite)
+
+# Rendert nur sporadisch serverseitig, sehr wechselhaft
+Kistler Gruppe (Karriereseite)

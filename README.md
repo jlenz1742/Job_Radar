@@ -152,18 +152,17 @@ einen Browser-UA.
 `Prio`, editieren — dann `python tools/sync_quellen.py` laufen lassen. Das
 baut `daten/quellen.json` komplett neu; nichts davon von Hand editieren.
 
-**Bekannte Lücke — Playwright/HTTPS in Sandboxen mit erzwungenem Proxy:**
-In einer Umgebung, die ausgehendes HTTPS zwingend über einen eigenen
-TLS-re-terminierenden Proxy leitet (wie die Cloud-Sandbox, in der dieses
-Tool entwickelt wurde), scheitert Headless-Chromium beim CONNECT-Handshake
-(`ERR_CONNECTION_RESET`, selbst zu example.com) — plain HTTP über denselben
-Proxy funktioniert einwandfrei. `curl`/`requests` sind nicht betroffen. Der
-JS-Pfad (`--kein-js` weglassen) ist deshalb nur auf einem normalen Rechner
-oder in GitHub Actions getestet, nicht in dieser Sandbox. Falls es doch mal
-dort laufen soll: zuerst `curl -x $HTTPS_PROXY https://example.com` pruefen.
+**Playwright läuft standardmässig über GitHub Actions**, siehe Abschnitt
+"Actions" unten — dort ist es zweimal (10.09.) echt gegengeprüft: 11 der
+15 JS-only-Firmen liefern echte Treffer. `--kein-js` ist nur für Umgebungen
+gedacht, die ausgehendes HTTPS zwingend über einen eigenen TLS-re-
+terminierenden Proxy leiten (z.B. die Cloud-Sandbox, in der dieses Tool
+entwickelt wurde) — dort scheitert Headless-Chromium beim CONNECT-
+Handshake (`ERR_CONNECTION_RESET`, selbst zu example.com), während
+`curl`/`requests` einwandfrei funktionieren.
 
-**Vor dem ersten echten Lauf mit JS-Firmen** (also ohne `--kein-js`) einmal
-pruefen, dass Playwright bei dir wirklich durchkommt:
+**Lokal testen, ob Playwright bei dir durchkommt** (z.B. bevor du es ohne
+Actions laufen lassen willst):
 
 ```bash
 playwright install chromium
@@ -172,3 +171,8 @@ python tools/test_js_lokal.py
 
 Testet 4 der 15 JS-only-Firmen (Workday + Eightfold) und sagt ehrlich, ob es
 am Mechanismus oder an der einzelnen Seite liegt, falls etwas schiefgeht.
+
+**Dauerhaft kaputte Quellen (Bot-Abwehr, nicht generisch lösbar)** stehen
+in `daten/bekannte_fehler.txt` — der Quellen-Wächter in der Action
+schlägt nur fehl, wenn eine Quelle NICHT auf dieser Liste auftaucht.
+Wird eine Quelle wieder zuverlässig, dort rausnehmen.

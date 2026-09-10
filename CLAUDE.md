@@ -141,7 +141,13 @@ voller Historie und ohne dass jemand sie bauen muss.
 
 ## Offene Punkte
 
-- `parser/mail.py` fehlt — Alert-Mails per IMAP ins Fundformat übersetzen
+- **`parser/mail.py` ist gebaut** — Alert-Mails von jobs.ch und LinkedIn
+  per IMAP (nur lesend, siehe Regel 1 oben) ins Fundformat übersetzt.
+  Gegen echte Mails aus dem Postfach getestet (`tests/test_mail_parser.py`).
+  Einschränkung: bisher existieren nur jobs.ch-"Alert wurde aktiv"-Mails,
+  kein laufendes "N neue Jobs"-Digest — falls das Format davon abweicht,
+  Mail dazulegen statt zu raten. `radar.yml` (Actions) ruft es schon auf,
+  aber ungetestet, siehe README-Abschnitt "Actions".
 - **Karriereseiten- und jobs.ch-Abruf ist jetzt automatisiert** (`abruf.py`,
   siehe README) — kein Agent mehr nötig für Schritt 2-4 der alten
   Übergabe. Der Playwright-Pfad (14 JS-only-Firmen) ist nur ausserhalb

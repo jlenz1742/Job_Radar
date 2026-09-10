@@ -106,7 +106,9 @@ existiert und keine private Korrespondenz enthält, ist das Risiko begrenzt —
 aber es ist eine bewusste Entscheidung, keine Formalie. Niemals das Passwort
 des privaten Kontos verwenden.
 
-Der Mail-Parser (`parser/mail.py`) fehlt noch.
+Der Mail-Parser (`parser/mail.py`) ist gebaut — siehe `parser/README.md`.
+Der Workflow braucht ihn noch nicht zu erwähnen, weil er unabhängig davon
+auch von Hand läuft.
 
 ## abruf.py — der eigenständige Abruf (kein Agent nötig)
 

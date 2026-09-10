@@ -21,9 +21,9 @@
    "kanton": "ZH",
    "segment": "Verpackung",
    "jobs_ch_suchbegriff": "Amcor",
-   "karriereseite": "",
+   "karriereseite": "https://amcor.wd5.myworkdayjobs.com/Amcor_External_Career_Site",
    "typ": "js_only",
-   "hinweis": "Workday, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday"
   },
   {
    "nr": 3,
@@ -69,9 +69,9 @@
    "kanton": "ZG",
    "segment": "Bauchemie/Spezialchemie",
    "jobs_ch_suchbegriff": "Sika",
-   "karriereseite": "",
+   "karriereseite": "https://www.sika.com/en/career/jobs.html",
    "typ": "js_only",
-   "hinweis": "kein Konzern-ATS, Liste per JS-Widget"
+   "hinweis": "nicht abrufbar ohne Rendern, JS-Widget"
   },
   {
    "nr": 7,
@@ -93,9 +93,9 @@
    "kanton": "GE",
    "segment": "Halbleiter",
    "jobs_ch_suchbegriff": "STMicroelectronics",
-   "karriereseite": "",
+   "karriereseite": "https://stmicroelectronics.eightfold.ai/careers",
    "typ": "js_only",
-   "hinweis": "Eightfold-SPA, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Eightfold-SPA"
   },
   {
    "nr": 9,
@@ -105,9 +105,9 @@
    "kanton": "GE",
    "segment": "Medtech/Ophthalmologie",
    "jobs_ch_suchbegriff": "Alcon",
-   "karriereseite": "",
+   "karriereseite": "https://alcon.wd5.myworkdayjobs.com/careers_alcon",
    "typ": "js_only",
-   "hinweis": "Workday, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday"
   },
   {
    "nr": 10,
@@ -153,9 +153,9 @@
    "kanton": "SH",
    "segment": "Elektronik/Navigation",
    "jobs_ch_suchbegriff": "Garmin",
-   "karriereseite": "",
+   "karriereseite": "https://careers.garmin.com/jobs",
    "typ": "js_only",
-   "hinweis": "nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, JS"
   },
   {
    "nr": 14,
@@ -165,9 +165,9 @@
    "kanton": "SH",
    "segment": "Maschinenbau/Fluidtechnik",
    "jobs_ch_suchbegriff": "Georg Fischer",
-   "karriereseite": "",
+   "karriereseite": "https://www.georgfischer.com/content/gfcorp/com/en/career/vacancies.html",
    "typ": "js_only",
-   "hinweis": "Workday, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday"
   },
   {
    "nr": 15,
@@ -189,9 +189,9 @@
    "kanton": "VD",
    "segment": "Elektronik/Peripherie",
    "jobs_ch_suchbegriff": "Logitech",
-   "karriereseite": "",
+   "karriereseite": "https://logitech.wd5.myworkdayjobs.com/en-US/Logitech",
    "typ": "js_only",
-   "hinweis": "Workday leer; CH-Variante robots-gesperrt"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday (CH ggf. robots-gesperrt)"
   },
   {
    "nr": 17,
@@ -201,9 +201,9 @@
    "kanton": "BL",
    "segment": "Prozessmesstechnik",
    "jobs_ch_suchbegriff": "Endress Hauser",
-   "karriereseite": "",
+   "karriereseite": "https://careers.endress.com/Switzerland/content/search/?locale=en_US",
    "typ": "js_only",
-   "hinweis": "Cookie-Wall, keine Liste erreichbar"
+   "hinweis": "nicht abrufbar ohne Rendern, Cookie-Wall"
   },
   {
    "nr": 18,
@@ -237,9 +237,9 @@
    "kanton": "ZH",
    "segment": "Maschinenbau/Anlagentechnik",
    "jobs_ch_suchbegriff": "Sulzer",
-   "karriereseite": "",
+   "karriereseite": "https://sulzer.wd502.myworkdayjobs.com/SulzerJobs",
    "typ": "js_only",
-   "hinweis": "Workday, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday"
   },
   {
    "nr": 21,
@@ -261,9 +261,9 @@
    "kanton": "SG",
    "segment": "Sanitär-/Gebäudetechnik",
    "jobs_ch_suchbegriff": "Geberit",
-   "karriereseite": "",
+   "karriereseite": "https://www.geberit.ch/karriere/",
    "typ": "js_only",
-   "hinweis": "nur Navigation; Unterseite robots-gesperrt"
+   "hinweis": "nicht abrufbar ohne Rendern, Navigation unklar"
   },
   {
    "nr": 23,
@@ -309,9 +309,9 @@
    "kanton": "ZH",
    "segment": "Maschinenbau",
    "jobs_ch_suchbegriff": "Bucher Municipal",
-   "karriereseite": "",
+   "karriereseite": "https://www.bucherindustries.com/en/career/vacancies",
    "typ": "js_only",
-   "hinweis": "keine Konzernliste — acht Divisionsportale"
+   "hinweis": "nicht abrufbar ohne Rendern, keine Konzernliste"
   },
   {
    "nr": 27,
@@ -333,9 +333,93 @@
    "kanton": "SG",
    "segment": "Verfahrenstechnik",
    "jobs_ch_suchbegriff": "Bühler",
-   "karriereseite": "",
+   "karriereseite": "https://www.buhlergroup.com/global/en/careers/jobs.html",
    "typ": "js_only",
-   "hinweis": "nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, JS"
+  },
+  {
+   "nr": 29,
+   "prio": "3",
+   "firma": "Straumann",
+   "ort": "Basel",
+   "kanton": "BS",
+   "segment": "Medtech/Dental",
+   "jobs_ch_suchbegriff": "Straumann",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 30,
+   "prio": "3",
+   "firma": "Franke Group (Artemis)",
+   "ort": "Aarburg",
+   "kanton": "AG",
+   "segment": "Gebäudetechnik/Foodservice",
+   "jobs_ch_suchbegriff": "Franke",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 31,
+   "prio": "3",
+   "firma": "Swiss Steel",
+   "ort": "Emmenbrücke",
+   "kanton": "LU",
+   "segment": "Stahl/Materialien",
+   "jobs_ch_suchbegriff": "Swiss Steel",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 32,
+   "prio": "3",
+   "firma": "Autoneum",
+   "ort": "Winterthur",
+   "kanton": "ZH",
+   "segment": "Automobilkomponenten",
+   "jobs_ch_suchbegriff": "Autoneum",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 33,
+   "prio": "3",
+   "firma": "EMS-CHEMIE",
+   "ort": "Domat/Ems",
+   "kanton": "GR",
+   "segment": "Materialien",
+   "jobs_ch_suchbegriff": "EMS-CHEMIE",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 34,
+   "prio": "3",
+   "firma": "Bobst Group",
+   "ort": "Mex",
+   "kanton": "VD",
+   "segment": "Verpackungsmaschinen",
+   "jobs_ch_suchbegriff": "Bobst Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 35,
+   "prio": "3",
+   "firma": "Pilatus Flugzeugwerke",
+   "ort": "Stans",
+   "kanton": "NW",
+   "segment": "Luftfahrt",
+   "jobs_ch_suchbegriff": "Pilatus",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
   },
   {
    "nr": 36,
@@ -347,6 +431,30 @@
    "jobs_ch_suchbegriff": "Stäubli",
    "karriereseite": "https://careers.smartrecruiters.com/staubligroup",
    "typ": "abrufbar",
+   "hinweis": ""
+  },
+  {
+   "nr": 37,
+   "prio": "3",
+   "firma": "OC Oerlikon",
+   "ort": "Pfäffikon SZ",
+   "kanton": "SZ",
+   "segment": "Materialien/Maschinenbau",
+   "jobs_ch_suchbegriff": "OC Oerlikon",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 38,
+   "prio": "3",
+   "firma": "Aebi Schmidt Group",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "segment": "Spezialfahrzeuge",
+   "jobs_ch_suchbegriff": "Aebi Schmidt",
+   "karriereseite": "",
+   "typ": "ungeprueft",
    "hinweis": ""
   },
   {
@@ -458,6 +566,18 @@
    "hinweis": ""
   },
   {
+   "nr": 48,
+   "prio": "3",
+   "firma": "Montana Aerospace",
+   "ort": "Reinach",
+   "kanton": "AG",
+   "segment": "Aerospace/Komponenten",
+   "jobs_ch_suchbegriff": "Montana Aerospace",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 49,
    "prio": "2",
    "firma": "Hamilton Bonaduz",
@@ -530,6 +650,30 @@
    "hinweis": ""
   },
   {
+   "nr": 55,
+   "prio": "3",
+   "firma": "Habasit",
+   "ort": "Reinach",
+   "kanton": "BL",
+   "segment": "Antriebs-/Fördertechnik",
+   "jobs_ch_suchbegriff": "Habasit",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 56,
+   "prio": "3",
+   "firma": "RUAG MRO Holding",
+   "ort": "Bern",
+   "kanton": "BE",
+   "segment": "Verteidigungstechnik",
+   "jobs_ch_suchbegriff": "RUAG",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 57,
    "prio": "1",
    "firma": "Kardex",
@@ -537,9 +681,21 @@
    "kanton": "ZH",
    "segment": "Intralogistik/Automation",
    "jobs_ch_suchbegriff": "Kardex",
-   "karriereseite": "",
+   "karriereseite": "https://kardex.wd103.myworkdayjobs.com/Kardex",
    "typ": "js_only",
-   "hinweis": "Workday, nur per JavaScript"
+   "hinweis": "nicht abrufbar ohne Rendern, Workday"
+  },
+  {
+   "nr": 58,
+   "prio": "3",
+   "firma": "Vetropack",
+   "ort": "Bülach",
+   "kanton": "ZH",
+   "segment": "Verpackung",
+   "jobs_ch_suchbegriff": "Vetropack",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
   },
   {
    "nr": 59,
@@ -638,6 +794,18 @@
    "hinweis": ""
   },
   {
+   "nr": 67,
+   "prio": "3",
+   "firma": "Eugster/Frismag",
+   "ort": "Amriswil",
+   "kanton": "TG",
+   "segment": "Gerätetechnik OEM",
+   "jobs_ch_suchbegriff": "Eugster Frismag",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 68,
    "prio": "2",
    "firma": "Cicor",
@@ -657,6 +825,18 @@
    "kanton": "BE",
    "segment": "Werkzeugmaschinen",
    "jobs_ch_suchbegriff": "Bystronic",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 70,
+   "prio": "3",
+   "firma": "Medela",
+   "ort": "Baar",
+   "kanton": "ZG",
+   "segment": "Medtech",
+   "jobs_ch_suchbegriff": "Medela",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -693,6 +873,18 @@
    "kanton": "ZG",
    "segment": "Hausgerätetechnik",
    "jobs_ch_suchbegriff": "V-ZUG",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 74,
+   "prio": "3",
+   "firma": "Acrotec Group",
+   "ort": "Delémont",
+   "kanton": "JU",
+   "segment": "Präzisionsfertigung",
+   "jobs_ch_suchbegriff": "Acrotec",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -758,6 +950,18 @@
    "hinweis": ""
   },
   {
+   "nr": 80,
+   "prio": "3",
+   "firma": "Comet Group",
+   "ort": "Flamatt",
+   "kanton": "FR",
+   "segment": "Halbleiter/Elektronik",
+   "jobs_ch_suchbegriff": "Comet",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 81,
    "prio": "2",
    "firma": "medmix",
@@ -765,6 +969,18 @@
    "kanton": "ZG",
    "segment": "Medtech/Komponenten",
    "jobs_ch_suchbegriff": "medmix",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 82,
+   "prio": "3",
+   "firma": "StarragTornos",
+   "ort": "Rorschacherberg",
+   "kanton": "SG",
+   "segment": "Werkzeugmaschinen",
+   "jobs_ch_suchbegriff": "StarragTornos",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -782,6 +998,18 @@
    "hinweis": ""
   },
   {
+   "nr": 84,
+   "prio": "3",
+   "firma": "R&S Group",
+   "ort": "Sissach",
+   "kanton": "BL",
+   "segment": "Energieinfrastruktur",
+   "jobs_ch_suchbegriff": "R&S Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 85,
    "prio": "2",
    "firma": "Beyond Gravity",
@@ -789,6 +1017,90 @@
    "kanton": "ZH",
    "segment": "Raumfahrt",
    "jobs_ch_suchbegriff": "Beyond Gravity",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 86,
+   "prio": "3",
+   "firma": "Victorinox",
+   "ort": "Ibach-Schwyz",
+   "kanton": "SZ",
+   "segment": "Konsum-/Präzisionsgüter",
+   "jobs_ch_suchbegriff": "Victorinox",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 87,
+   "prio": "3",
+   "firma": "Rheinmetall Air Defence",
+   "ort": "Zürich-Oerlikon",
+   "kanton": "ZH",
+   "segment": "Verteidigungstechnik",
+   "jobs_ch_suchbegriff": "Rheinmetall",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 88,
+   "prio": "3",
+   "firma": "GDELS-Mowag",
+   "ort": "Kreuzlingen",
+   "kanton": "TG",
+   "segment": "Verteidigungstechnik",
+   "jobs_ch_suchbegriff": "Mowag",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 89,
+   "prio": "3",
+   "firma": "Mikron",
+   "ort": "Agno",
+   "kanton": "TI",
+   "segment": "Automation/Maschinenbau",
+   "jobs_ch_suchbegriff": "Mikron",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 90,
+   "prio": "3",
+   "firma": "Griesser",
+   "ort": "Aadorf",
+   "kanton": "TG",
+   "segment": "Gebäudetechnik/Sonnenschutz",
+   "jobs_ch_suchbegriff": "Griesser",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 91,
+   "prio": "3",
+   "firma": "Aluflexpack",
+   "ort": "Reinach",
+   "kanton": "AG",
+   "segment": "Verpackung",
+   "jobs_ch_suchbegriff": "Aluflexpack",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 92,
+   "prio": "3",
+   "firma": "Sonceboz",
+   "ort": "Sonceboz-Sombeval",
+   "kanton": "BE",
+   "segment": "Mechatronik",
+   "jobs_ch_suchbegriff": "Sonceboz",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -878,6 +1190,30 @@
    "hinweis": ""
   },
   {
+   "nr": 100,
+   "prio": "3",
+   "firma": "Schurter Holding",
+   "ort": "Luzern",
+   "kanton": "LU",
+   "segment": "Elektronikkomponenten",
+   "jobs_ch_suchbegriff": "Schurter",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 101,
+   "prio": "3",
+   "firma": "LEM",
+   "ort": "Meyrin",
+   "kanton": "GE",
+   "segment": "Sensorik",
+   "jobs_ch_suchbegriff": "LEM",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 102,
    "prio": "1",
    "firma": "Angst+Pfister",
@@ -890,6 +1226,18 @@
    "hinweis": ""
   },
   {
+   "nr": 103,
+   "prio": "3",
+   "firma": "Orell Füssli",
+   "ort": "Zürich",
+   "kanton": "ZH",
+   "segment": "Sicherheitsdruck",
+   "jobs_ch_suchbegriff": "Orell Füssli",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 104,
    "prio": "2",
    "firma": "Güdel Group",
@@ -897,6 +1245,30 @@
    "kanton": "BE",
    "segment": "Automation/Lineartechnik",
    "jobs_ch_suchbegriff": "Güdel",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 105,
+   "prio": "3",
+   "firma": "Medartis",
+   "ort": "Basel",
+   "kanton": "BS",
+   "segment": "Medtech",
+   "jobs_ch_suchbegriff": "Medartis",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 106,
+   "prio": "3",
+   "firma": "Georg Utz Holding",
+   "ort": "Bremgarten",
+   "kanton": "AG",
+   "segment": "Intralogistik-Komponenten",
+   "jobs_ch_suchbegriff": "Georg Utz",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -914,6 +1286,54 @@
    "hinweis": ""
   },
   {
+   "nr": 108,
+   "prio": "3",
+   "firma": "Bernina International",
+   "ort": "Steckborn",
+   "kanton": "TG",
+   "segment": "Präzisionsmaschinen",
+   "jobs_ch_suchbegriff": "Bernina",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 109,
+   "prio": "3",
+   "firma": "COLTENE",
+   "ort": "Altstätten",
+   "kanton": "SG",
+   "segment": "Medtech/Dental",
+   "jobs_ch_suchbegriff": "COLTENE",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 110,
+   "prio": "3",
+   "firma": "NETSTAL Maschinen",
+   "ort": "Näfels",
+   "kanton": "GL",
+   "segment": "Kunststoffmaschinen",
+   "jobs_ch_suchbegriff": "Netstal",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 111,
+   "prio": "3",
+   "firma": "Thermoplan",
+   "ort": "Weggis",
+   "kanton": "LU",
+   "segment": "Gerätetechnik/Foodservice",
+   "jobs_ch_suchbegriff": "Thermoplan",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 112,
    "prio": "2",
    "firma": "Zünd Systemtechnik",
@@ -921,6 +1341,18 @@
    "kanton": "SG",
    "segment": "Maschinenbau/Digitalfertigung",
    "jobs_ch_suchbegriff": "Zünd",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 113,
+   "prio": "3",
+   "firma": "Jakob Müller Group",
+   "ort": "Frick",
+   "kanton": "AG",
+   "segment": "Textilmaschinen",
+   "jobs_ch_suchbegriff": "Jakob Müller",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -950,6 +1382,42 @@
    "hinweis": ""
   },
   {
+   "nr": 116,
+   "prio": "3",
+   "firma": "Elma Electronic",
+   "ort": "Wetzikon",
+   "kanton": "ZH",
+   "segment": "Elektronik",
+   "jobs_ch_suchbegriff": "Elma Electronic",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 117,
+   "prio": "3",
+   "firma": "Ferrum Gruppe",
+   "ort": "Rupperswil",
+   "kanton": "AG",
+   "segment": "Verfahrenstechnik",
+   "jobs_ch_suchbegriff": "Ferrum",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 118,
+   "prio": "3",
+   "firma": "Otto Suhner (SUHNER)",
+   "ort": "Lupfig",
+   "kanton": "AG",
+   "segment": "Fertigungstechnik",
+   "jobs_ch_suchbegriff": "Suhner",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 119,
    "prio": "2",
    "firma": "Uster Technologies",
@@ -957,6 +1425,102 @@
    "kanton": "ZH",
    "segment": "Mess-/Prüftechnik",
    "jobs_ch_suchbegriff": "Uster Technologies",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 120,
+   "prio": "3",
+   "firma": "Feller",
+   "ort": "Horgen",
+   "kanton": "ZH",
+   "segment": "Elektroinstallation",
+   "jobs_ch_suchbegriff": "Feller",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 121,
+   "prio": "3",
+   "firma": "Cendres+Métaux",
+   "ort": "Biel/Bienne",
+   "kanton": "BE",
+   "segment": "Präzisionsfertigung/Medtech",
+   "jobs_ch_suchbegriff": "Cendres Metaux",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 122,
+   "prio": "3",
+   "firma": "Schaffner (TE-Marke)",
+   "ort": "Luterbach",
+   "kanton": "SO",
+   "segment": "Elektronikkomponenten",
+   "jobs_ch_suchbegriff": "Schaffner",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 123,
+   "prio": "3",
+   "firma": "Blaser Swisslube",
+   "ort": "Hasle-Rüegsau",
+   "kanton": "BE",
+   "segment": "Prozessmedien",
+   "jobs_ch_suchbegriff": "Blaser Swisslube",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 124,
+   "prio": "3",
+   "firma": "Ernst Schweizer",
+   "ort": "Hedingen",
+   "kanton": "ZH",
+   "segment": "Gebäudetechnik/Metallbau",
+   "jobs_ch_suchbegriff": "Ernst Schweizer",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 125,
+   "prio": "3",
+   "firma": "Stöcklin Logistik",
+   "ort": "Laufen",
+   "kanton": "BL",
+   "segment": "Intralogistik",
+   "jobs_ch_suchbegriff": "Stöcklin",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 126,
+   "prio": "3",
+   "firma": "Willemin-Macodel",
+   "ort": "Delémont",
+   "kanton": "JU",
+   "segment": "Werkzeugmaschinen",
+   "jobs_ch_suchbegriff": "Willemin",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 127,
+   "prio": "3",
+   "firma": "Fraisa",
+   "ort": "Bellach",
+   "kanton": "SO",
+   "segment": "Präzisionswerkzeuge",
+   "jobs_ch_suchbegriff": "Fraisa",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -986,6 +1550,174 @@
    "hinweis": ""
   },
   {
+   "nr": 130,
+   "prio": "3",
+   "firma": "MPS Micro Precision Systems",
+   "ort": "Biel/Bienne",
+   "kanton": "BE",
+   "segment": "Mikrotechnik",
+   "jobs_ch_suchbegriff": "MPS Micro Precision",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 131,
+   "prio": "3",
+   "firma": "Trafag",
+   "ort": "Bubikon",
+   "kanton": "ZH",
+   "segment": "Sensorik/Messtechnik",
+   "jobs_ch_suchbegriff": "Trafag",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 132,
+   "prio": "3",
+   "firma": "Liebherr Machines Bulle",
+   "ort": "Bulle",
+   "kanton": "FR",
+   "segment": "Antriebstechnik",
+   "jobs_ch_suchbegriff": "Liebherr",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 133,
+   "prio": "3",
+   "firma": "Syntegon (Standort Beringen)",
+   "ort": "Beringen",
+   "kanton": "SH",
+   "segment": "Verpackungsmaschinen",
+   "jobs_ch_suchbegriff": "Syntegon",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 134,
+   "prio": "3",
+   "firma": "TRUMPF Schweiz",
+   "ort": "Grüsch",
+   "kanton": "GR",
+   "segment": "Werkzeugmaschinen/Laser",
+   "jobs_ch_suchbegriff": "TRUMPF",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 135,
+   "prio": "3",
+   "firma": "thyssenkrupp Presta",
+   "ort": "Eschen",
+   "kanton": "FL",
+   "segment": "Automotive-Zulieferung",
+   "jobs_ch_suchbegriff": "thyssenkrupp Presta",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 136,
+   "prio": "3",
+   "firma": "Hoval",
+   "ort": "Vaduz",
+   "kanton": "FL",
+   "segment": "Gebäudetechnik/HLK",
+   "jobs_ch_suchbegriff": "Hoval",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 137,
+   "prio": "3",
+   "firma": "KAISER",
+   "ort": "Schaanwald (Mauren)",
+   "kanton": "FL",
+   "segment": "Spezialfahrzeuge/Maschinenbau",
+   "jobs_ch_suchbegriff": "KAISER",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 138,
+   "prio": "3",
+   "firma": "Neutrik",
+   "ort": "Schaan",
+   "kanton": "FL",
+   "segment": "Elektrotechnik/Verbindungstechnik",
+   "jobs_ch_suchbegriff": "Neutrik",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 139,
+   "prio": "3",
+   "firma": "Elkuch Group",
+   "ort": "Bendern/Gamprin",
+   "kanton": "FL",
+   "segment": "Metallbau/Industriekomponenten",
+   "jobs_ch_suchbegriff": "Elkuch Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 140,
+   "prio": "3",
+   "firma": "Pantec Group",
+   "ort": "Ruggell",
+   "kanton": "FL",
+   "segment": "Automatisierung/Maschinenbau",
+   "jobs_ch_suchbegriff": "Pantec Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 141,
+   "prio": "3",
+   "firma": "Siemens Schweiz (Smart Infrastructure)",
+   "ort": "Zug",
+   "kanton": "ZG",
+   "segment": "Elektrotechnik/Gebäudeinfrastruktur",
+   "jobs_ch_suchbegriff": "Siemens Schweiz (Smart Infrastructure)",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 142,
+   "prio": "3",
+   "firma": "J&J MedTech / DePuy Synthes",
+   "ort": "Zuchwil",
+   "kanton": "SO",
+   "segment": "Medtech (Orthopädie/Trauma)",
+   "jobs_ch_suchbegriff": "J&J MedTech   DePuy Synthes",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 143,
+   "prio": "3",
+   "firma": "SR Technics",
+   "ort": "Kloten",
+   "kanton": "ZH",
+   "segment": "Luftfahrt/MRO",
+   "jobs_ch_suchbegriff": "SR Technics",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 144,
    "prio": "2",
    "firma": "Leica Geosystems",
@@ -993,6 +1725,54 @@
    "kanton": "SG",
    "segment": "Mess-/Sensortechnik",
    "jobs_ch_suchbegriff": "Leica Geosystems",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 145,
+   "prio": "3",
+   "firma": "Medtronic Europe",
+   "ort": "Tolochenaz",
+   "kanton": "VD",
+   "segment": "Medtech (Herzrhythmus)",
+   "jobs_ch_suchbegriff": "Medtronic Europe",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 146,
+   "prio": "3",
+   "firma": "Zimmer Switzerland Manufacturing",
+   "ort": "Winterthur",
+   "kanton": "ZH",
+   "segment": "Medtech (Orthopädie)",
+   "jobs_ch_suchbegriff": "Zimmer Switzerland Manufacturing",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 147,
+   "prio": "3",
+   "firma": "Stryker",
+   "ort": "Selzach",
+   "kanton": "SO",
+   "segment": "Medtech (Trauma)",
+   "jobs_ch_suchbegriff": "Stryker",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 148,
+   "prio": "3",
+   "firma": "Biotronik Vascular (Teleflex)",
+   "ort": "Bülach",
+   "kanton": "ZH",
+   "segment": "Medtech (Kardiologie)",
+   "jobs_ch_suchbegriff": "Biotronik Vascular (Teleflex)",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -1010,6 +1790,18 @@
    "hinweis": ""
   },
   {
+   "nr": 150,
+   "prio": "3",
+   "firma": "Jet Aviation",
+   "ort": "Basel",
+   "kanton": "BS",
+   "segment": "Luftfahrt/MRO",
+   "jobs_ch_suchbegriff": "Jet Aviation",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 151,
    "prio": "2",
    "firma": "Everllence Schweiz (ex MAN ES)",
@@ -1017,6 +1809,18 @@
    "kanton": "ZH",
    "segment": "Energietechnik/Turbomaschinen",
    "jobs_ch_suchbegriff": "Everllence Schweiz (ex MAN ES)",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 152,
+   "prio": "3",
+   "firma": "Dentsply Sirona Switzerland",
+   "ort": "Ballaigues",
+   "kanton": "VD",
+   "segment": "Dental (Endodontie)",
+   "jobs_ch_suchbegriff": "Dentsply Sirona Switzerland",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""
@@ -1034,6 +1838,174 @@
    "hinweis": ""
   },
   {
+   "nr": 154,
+   "prio": "3",
+   "firma": "Kanadevia Inova",
+   "ort": "Zürich",
+   "kanton": "ZH",
+   "segment": "Energie-/Umwelttechnik",
+   "jobs_ch_suchbegriff": "Kanadevia Inova",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 155,
+   "prio": "3",
+   "firma": "FAULHABER SA",
+   "ort": "Croglio",
+   "kanton": "TI",
+   "segment": "Mikrotechnik/Antriebe",
+   "jobs_ch_suchbegriff": "FAULHABER SA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 156,
+   "prio": "3",
+   "firma": "Safran Vectronix",
+   "ort": "Heerbrugg",
+   "kanton": "SG",
+   "segment": "Verteidigung/Optronik",
+   "jobs_ch_suchbegriff": "Safran Vectronix",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 157,
+   "prio": "3",
+   "firma": "Winterthur Gas & Diesel (WinGD)",
+   "ort": "Winterthur",
+   "kanton": "ZH",
+   "segment": "Schiffsantriebe",
+   "jobs_ch_suchbegriff": "Winterthur Gas & Diesel (WinGD)",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 158,
+   "prio": "3",
+   "firma": "Saurer",
+   "ort": "Arbon",
+   "kanton": "TG",
+   "segment": "Textilmaschinenbau",
+   "jobs_ch_suchbegriff": "Saurer",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 159,
+   "prio": "3",
+   "firma": "Becton Dickinson (BD Switzerland)",
+   "ort": "Eysins",
+   "kanton": "VD",
+   "segment": "Medtech/Diagnostikgeräte",
+   "jobs_ch_suchbegriff": "Becton Dickinson (BD Switzerland)",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 160,
+   "prio": "3",
+   "firma": "Intuitive Surgical",
+   "ort": "Aubonne",
+   "kanton": "VD",
+   "segment": "Medtech (Roboterchirurgie)",
+   "jobs_ch_suchbegriff": "Intuitive Surgical",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 161,
+   "prio": "3",
+   "firma": "Beckman Coulter International",
+   "ort": "Nyon",
+   "kanton": "VD",
+   "segment": "Labor-/Diagnostikinstrumente",
+   "jobs_ch_suchbegriff": "Beckman Coulter International",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 162,
+   "prio": "3",
+   "firma": "Bio-Rad Laboratories",
+   "ort": "Cressier",
+   "kanton": "FR",
+   "segment": "Diagnostikgeräte",
+   "jobs_ch_suchbegriff": "Bio-Rad Laboratories",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 163,
+   "prio": "3",
+   "firma": "Edwards Lifesciences",
+   "ort": "Nyon",
+   "kanton": "VD",
+   "segment": "Medtech (Herzklappen)",
+   "jobs_ch_suchbegriff": "Edwards Lifesciences",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 164,
+   "prio": "3",
+   "firma": "Garrett Motion",
+   "ort": "Rolle",
+   "kanton": "VD",
+   "segment": "Antriebstechnik/Turbolader",
+   "jobs_ch_suchbegriff": "Garrett Motion",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 165,
+   "prio": "3",
+   "firma": "Archroma",
+   "ort": "Pratteln",
+   "kanton": "BL",
+   "segment": "Spezialchemie",
+   "jobs_ch_suchbegriff": "Archroma",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 166,
+   "prio": "3",
+   "firma": "Zimmer Biomet EMEA",
+   "ort": "Zug",
+   "kanton": "ZG",
+   "segment": "Medtech (Orthopädie)",
+   "jobs_ch_suchbegriff": "Zimmer Biomet EMEA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 167,
+   "prio": "3",
+   "firma": "CAMLOG Biotechnologies",
+   "ort": "Basel",
+   "kanton": "BS",
+   "segment": "Dental (Implantologie)",
+   "jobs_ch_suchbegriff": "CAMLOG Biotechnologies",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 168,
    "prio": "1",
    "firma": "HOERBIGER Holding",
@@ -1041,9 +2013,189 @@
    "kanton": "ZG",
    "segment": "Kompressor-/Antriebstechnik",
    "jobs_ch_suchbegriff": "HOERBIGER Holding",
-   "karriereseite": "",
+   "karriereseite": "https://careers.hoerbiger.com/",
    "typ": "js_only",
-   "hinweis": "SuccessFactors, nur Cookie-Banner"
+   "hinweis": "nicht abrufbar ohne Rendern, SuccessFactors"
+  },
+  {
+   "nr": 169,
+   "prio": "3",
+   "firma": "Parker Hannifin EMEA",
+   "ort": "Etoy",
+   "kanton": "VD",
+   "segment": "Antriebs-/Fluidtechnik",
+   "jobs_ch_suchbegriff": "Parker Hannifin EMEA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 170,
+   "prio": "3",
+   "firma": "Johnson Controls EMEALA",
+   "ort": "Neuhausen a. Rhf.",
+   "kanton": "SH",
+   "segment": "Gebäudetechnik/Brandschutz",
+   "jobs_ch_suchbegriff": "Johnson Controls EMEALA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 171,
+   "prio": "3",
+   "firma": "Resideo Technologies EMEA",
+   "ort": "Rolle",
+   "kanton": "VD",
+   "segment": "Gebäudeelektronik/Sicherheit",
+   "jobs_ch_suchbegriff": "Resideo Technologies EMEA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 172,
+   "prio": "3",
+   "firma": "Caterpillar SARL",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Baumaschinen/Energiesysteme",
+   "jobs_ch_suchbegriff": "Caterpillar SARL",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 173,
+   "prio": "3",
+   "firma": "Honeywell International Sàrl",
+   "ort": "Rolle",
+   "kanton": "VD",
+   "segment": "Industrietechnologie/Automation",
+   "jobs_ch_suchbegriff": "Honeywell International Sàrl",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 174,
+   "prio": "3",
+   "firma": "Emerson Process Management Europe",
+   "ort": "Baar",
+   "kanton": "ZG",
+   "segment": "Prozessautomation",
+   "jobs_ch_suchbegriff": "Emerson Process Management Europe",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 175,
+   "prio": "3",
+   "firma": "Eaton EMEA",
+   "ort": "Morges",
+   "kanton": "VD",
+   "segment": "Elektrotechnik/Energieverteilung",
+   "jobs_ch_suchbegriff": "Eaton EMEA",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 176,
+   "prio": "3",
+   "firma": "Dow Europe",
+   "ort": "Horgen",
+   "kanton": "ZH",
+   "segment": "Chemie/Industriematerialien",
+   "jobs_ch_suchbegriff": "Dow Europe",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 177,
+   "prio": "3",
+   "firma": "Tetra Laval International",
+   "ort": "Pully",
+   "kanton": "VD",
+   "segment": "Verpackungs-/Prozessmaschinen",
+   "jobs_ch_suchbegriff": "Tetra Laval International",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 178,
+   "prio": "3",
+   "firma": "Aptiv Technologies",
+   "ort": "Schaffhausen",
+   "kanton": "SH",
+   "segment": "Fahrzeugelektronik",
+   "jobs_ch_suchbegriff": "Aptiv Technologies",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 179,
+   "prio": "3",
+   "firma": "Transocean",
+   "ort": "Steinhausen",
+   "kanton": "ZG",
+   "segment": "Offshore-Bohrtechnik",
+   "jobs_ch_suchbegriff": "Transocean",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 180,
+   "prio": "3",
+   "firma": "Allseas Group",
+   "ort": "Châtel-Saint-Denis",
+   "kanton": "FR",
+   "segment": "Offshore-Pipelinebau",
+   "jobs_ch_suchbegriff": "Allseas Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 181,
+   "prio": "3",
+   "firma": "Nobel Biocare Services",
+   "ort": "Kloten",
+   "kanton": "ZH",
+   "segment": "Dental (Implantologie)",
+   "jobs_ch_suchbegriff": "Nobel Biocare Services",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 182,
+   "prio": "3",
+   "firma": "Medos International",
+   "ort": "Le Locle",
+   "kanton": "NE",
+   "segment": "Medtech (Chirurgie)",
+   "jobs_ch_suchbegriff": "Medos International",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 183,
+   "prio": "3",
+   "firma": "Baxter Healthcare",
+   "ort": "Glattpark (Opfikon)",
+   "kanton": "ZH",
+   "segment": "Medtech (Akutversorgung)",
+   "jobs_ch_suchbegriff": "Baxter Healthcare",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
   },
   {
    "nr": 184,
@@ -1055,6 +2207,54 @@
    "jobs_ch_suchbegriff": "Santrade (Sandvik)",
    "karriereseite": "https://www.home.sandvik/en/careers/job-search/",
    "typ": "abrufbar",
+   "hinweis": ""
+  },
+  {
+   "nr": 185,
+   "prio": "3",
+   "firma": "Thermo Fisher Scientific Ecublens",
+   "ort": "Ecublens",
+   "kanton": "VD",
+   "segment": "Analytische Instrumente",
+   "jobs_ch_suchbegriff": "Thermo Fisher Scientific Ecublens",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 186,
+   "prio": "3",
+   "firma": "Sigma-Aldrich (Merck Life Science)",
+   "ort": "Buchs",
+   "kanton": "SG",
+   "segment": "Labor-/Analytikbedarf",
+   "jobs_ch_suchbegriff": "Sigma-Aldrich (Merck Life Science)",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 187,
+   "prio": "3",
+   "firma": "Estun Robotics Europe",
+   "ort": "Baar",
+   "kanton": "ZG",
+   "segment": "Industrierobotik",
+   "jobs_ch_suchbegriff": "Estun Robotics Europe",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 188,
+   "prio": "3",
+   "firma": "Vitol",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Energiehandel",
+   "jobs_ch_suchbegriff": "Vitol",
+   "karriereseite": "",
+   "typ": "ungeprueft",
    "hinweis": ""
   },
   {
@@ -1070,6 +2270,54 @@
    "hinweis": ""
   },
   {
+   "nr": 190,
+   "prio": "3",
+   "firma": "Trafigura",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Energie-/Metallhandel",
+   "jobs_ch_suchbegriff": "Trafigura",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 191,
+   "prio": "3",
+   "firma": "Gunvor",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Energiehandel",
+   "jobs_ch_suchbegriff": "Gunvor",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 192,
+   "prio": "3",
+   "firma": "Bunge Global",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Agrarverarbeitung/-handel",
+   "jobs_ch_suchbegriff": "Bunge Global",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 193,
+   "prio": "3",
+   "firma": "Louis Dreyfus Company",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Agrarhandel",
+   "jobs_ch_suchbegriff": "Louis Dreyfus Company",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
    "nr": 194,
    "prio": "2",
    "firma": "MET Group",
@@ -1077,6 +2325,114 @@
    "kanton": "ZG",
    "segment": "Energiehandel/Versorger",
    "jobs_ch_suchbegriff": "MET Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 195,
+   "prio": "3",
+   "firma": "Duferco",
+   "ort": "Lugano",
+   "kanton": "TI",
+   "segment": "Stahl-/Energiehandel",
+   "jobs_ch_suchbegriff": "Duferco",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 196,
+   "prio": "3",
+   "firma": "Ameropa",
+   "ort": "Binningen",
+   "kanton": "BL",
+   "segment": "Agrar-/Düngerhandel",
+   "jobs_ch_suchbegriff": "Ameropa",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 197,
+   "prio": "3",
+   "firma": "Kolmar Group",
+   "ort": "Zug",
+   "kanton": "ZG",
+   "segment": "Petrochemie-/Biofuel-Handel",
+   "jobs_ch_suchbegriff": "Kolmar Group",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 198,
+   "prio": "3",
+   "firma": "Cargill International",
+   "ort": "Grand-Lancy (Genf)",
+   "kanton": "GE",
+   "segment": "Agrarhandel/Schifffahrt",
+   "jobs_ch_suchbegriff": "Cargill International",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 199,
+   "prio": "3",
+   "firma": "Mercuria",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Energie-/Metallhandel",
+   "jobs_ch_suchbegriff": "Mercuria",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 200,
+   "prio": "3",
+   "firma": "ECOM Agroindustrial",
+   "ort": "Pully",
+   "kanton": "VD",
+   "segment": "Agrarhandel",
+   "jobs_ch_suchbegriff": "ECOM Agroindustrial",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 201,
+   "prio": "3",
+   "firma": "IXM",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Metallhandel",
+   "jobs_ch_suchbegriff": "IXM",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 202,
+   "prio": "3",
+   "firma": "Sucafina",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Agrarhandel/Kaffee",
+   "jobs_ch_suchbegriff": "Sucafina",
+   "karriereseite": "",
+   "typ": "ungeprueft",
+   "hinweis": ""
+  },
+  {
+   "nr": 203,
+   "prio": "3",
+   "firma": "Alvean",
+   "ort": "Genf",
+   "kanton": "GE",
+   "segment": "Agrarhandel/Zucker",
+   "jobs_ch_suchbegriff": "Alvean",
    "karriereseite": "",
    "typ": "ungeprueft",
    "hinweis": ""

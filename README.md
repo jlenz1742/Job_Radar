@@ -107,3 +107,55 @@ aber es ist eine bewusste Entscheidung, keine Formalie. Niemals das Passwort
 des privaten Kontos verwenden.
 
 Der Mail-Parser (`parser/mail.py`) fehlt noch.
+
+## abruf.py — der eigenständige Abruf (kein Agent nötig)
+
+`radar.py` ruft bewusst nichts ab (siehe oben). `abruf.py` ist die Ergänzung
+dazu: ein einziges Kommando, das Karriereseiten und jobs.ch wirklich abfragt,
+die Treffer normalisiert und direkt in `radar.py` einspeist:
+
+```bash
+pip install -r requirements.txt
+python abruf.py run --prio 1              # Prio-1-Firmen, alles
+python abruf.py run --prio 1,2 --pause 1   # mehrere Priostufen, hoeflicher
+python abruf.py run --prio 1 --kein-js     # Karriereseiten ohne Playwright
+                                            # (Workday/Eightfold ueberspringen,
+                                            # nur noch jobs.ch fuer die 14 Firmen)
+```
+
+Am Ende steht `Job_Radar.xlsx` auf dem neuesten Stand, `state.json` hat den
+Lauf verbucht, und `laeufe/lauf_<datum>_<zeit>.json` haelt die Rohtreffer
+dieses Laufs fest (Fund- und Quellenformat wie gewohnt).
+
+**Bausteine** (`fetch/`):
+- `static_page.py` — Karriereseiten, die serverseitig rendern (`requests`)
+- `js_page.py` — Karriereseiten, die nur per JavaScript rendern (Workday,
+  Eightfold, ...) via Playwright/Headless-Chromium
+- `jobsch.py` — jobs.ch-Stichwortsuche, nach echtem Arbeitgeber gefiltert
+- `extract.py` — die Heuristik, die aus HTML Job-Titel+Link herausliest
+
+**Die Heuristik ist generisch, kein Parser pro ATS-System.** Sie erkennt
+Job-Detailseiten am URL-Muster (`.../job/<titel>/<id>/` o.ä.) — das deckt die
+meisten Konzern-Karriereseiten ab. Erkennt sie nichts, liefert sie bewusst
+**0 Treffer statt zu raten** (`FEHLER — Struktur nicht erkannt`): lieber eine
+sichtbare Lücke als erfundene Stellen aus der Marketing-Navigation.
+Betroffene Firmen brauchen einen eigenen Blick auf ihre Seite.
+
+**Wichtiger Fallstrick, live gegengeprüft:** jobs.ch liefert einem Client mit
+Browser-User-Agent (aber ohne echtes JS dahinter) einen Satz Köder-Treffer
+statt der echten Suche. `fetch/jobsch.py` verzichtet deshalb absichtlich auf
+einen Browser-UA.
+
+**Priorisierung ändern:** Nur `daten/Zielliste_CH_Industrie.xlsx`, Spalte
+`Prio`, editieren — dann `python tools/sync_quellen.py` laufen lassen. Das
+baut `daten/quellen.json` komplett neu; nichts davon von Hand editieren.
+
+**Bekannte Lücke — Playwright/HTTPS in Sandboxen mit erzwungenem Proxy:**
+In einer Umgebung, die ausgehendes HTTPS zwingend über einen eigenen
+TLS-re-terminierenden Proxy leitet (wie die Cloud-Sandbox, in der dieses
+Tool entwickelt wurde), scheitert Headless-Chromium beim CONNECT-Handshake
+(`ERR_CONNECTION_RESET`, selbst zu example.com) — plain HTTP über denselben
+Proxy funktioniert einwandfrei. `curl`/`requests` sind nicht betroffen. Der
+JS-Pfad (`--kein-js` weglassen) ist deshalb nur auf einem normalen Rechner
+oder in GitHub Actions getestet, nicht in dieser Sandbox. Falls es doch mal
+dort laufen soll: zuerst `curl -x $HTTPS_PROXY https://example.com` pruefen.

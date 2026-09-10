@@ -101,8 +101,9 @@ mehreren echten Läufen (10.09.2026). Ablauf:
    IMAP-Fehler bricht den restlichen Lauf nicht ab
 3. `Job_Radar.xlsx` neu bauen, `state.json` + Excel + `laeufe/`-Rohdaten committen
 4. **Tägliche Zusammenfassung** (`tools/bericht.py`) als GitHub Issue:
-   Übersicht aller neuen Stellen der letzten 3 Tage + eine von der Claude
-   API bewertete Shortlist der vielversprechendsten (siehe unten)
+   Übersicht aller neuen Stellen der letzten 5 Tage + eine von der Claude
+   API bewertete Shortlist der vielversprechendsten, ohne Obergrenze
+   (siehe unten)
 5. Quellen-Wächter: schlägt nur fehl, wenn eine NEUE, unbekannte Quelle
    ausfällt (bekannte Bot-Abwehr-Fälle stehen in `daten/bekannte_fehler.txt`)
 
@@ -124,13 +125,18 @@ Passwort des privaten Kontos verwenden.
 
 ## tools/bericht.py — tägliche Zusammenfassung
 
-Liest `state.json`, filtert Jobs mit `erstmals` in den letzten 3 Tagen
-(**ungefiltert** — das ist die Übersicht), wendet dann für die Shortlist
-einen Regel-Vorfilter an (Rollen-Keywords/Ausschlüsse aus `CLAUDE.md`,
-Geografie leicht bevorzugt, Deckel bei 40 Kandidaten) und schickt genau
-diese Kandidaten an die Claude API zur inhaltlichen Bewertung
-(STARK/MÖGLICH + Begründung, maximal 8, nie aufgefüllt). Ergebnis: ein
-GitHub Issue "Job-Radar — <Datum>".
+Liest `state.json`, filtert Jobs mit `erstmals` in den letzten 5 Tagen
+(**ungefiltert** — das ist die Übersicht) und schickt **alle** davon an
+die Claude API zur inhaltlichen Bewertung (STARK/MÖGLICH + Begründung).
+Bewusst **kein Keyword-Vorfilter** — der würde genau die Stellen
+riskieren zu verschlucken, die die Shortlist finden soll, weil ein Titel
+ungewöhnlich formuliert ist. Die Shortlist hat **keine feste
+Obergrenze**: 2 echte Treffer geben 2 Einträge, 20 geben 20 — nie
+aufgefüllt, wenn weniger passen, nie künstlich gekürzt, wenn mehr passen.
+`SICHERHEITSDECKEL` (250) in `tools/bericht.py` ist nur ein Schutz gegen
+einen entgleisten Lauf (z.B. Hunderte "neue" Jobs an einem einzelnen
+Tag), keine Auswahl-Grenze — greift er, steht das sichtbar im Issue.
+Ergebnis: ein GitHub Issue "Job-Radar — <Datum>".
 
 Ohne `ANTHROPIC_API_KEY` erscheint die Übersicht trotzdem, nur ohne
 Shortlist-Abschnitt (mit Hinweis warum). Lokal testen:

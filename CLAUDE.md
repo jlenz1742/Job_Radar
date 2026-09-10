@@ -150,12 +150,15 @@ voller Historie und ohne dass jemand sie bauen muss.
   jobs.ch-"Alert wurde aktiv"-Mails, kein laufendes "N neue Jobs"-Digest —
   falls das Format davon abweicht, Mail dazulegen statt zu raten.
 - **`tools/bericht.py` — tägliche Zusammenfassung als GitHub Issue.**
-  Übersicht (neue Jobs, letzte 3 Tage, ungefiltert) + Shortlist
-  (Regel-Vorfilter, dann Claude API bewertet die Kandidaten inhaltlich
-  gegen das Profil oben, max. 8, nie aufgefüllt). Braucht
-  `ANTHROPIC_API_KEY` als Secret; ohne das erscheint die Übersicht
-  trotzdem, nur ohne Shortlist. Modell: `claude-sonnet-5` — bei einer
-  Modellumbenennung auf Anthropic-Seite hier nachziehen.
+  Übersicht (neue Jobs, letzte 5 Tage, ungefiltert) + Shortlist: JEDER
+  neue Job geht direkt an die Claude API (kein Keyword-Vorfilter mehr —
+  Jan will nichts durch ein starres Raster verlieren), Bewertung
+  inhaltlich gegen das Profil oben, **ohne feste Obergrenze**, nie
+  aufgefüllt. `SICHERHEITSDECKEL` (250) ist nur ein Schutz gegen einen
+  entgleisten Lauf, keine Auswahl-Grenze. Braucht `ANTHROPIC_API_KEY` als
+  Secret; ohne das erscheint die Übersicht trotzdem, nur ohne Shortlist.
+  Modell: `claude-sonnet-5` — bei einer Modellumbenennung auf
+  Anthropic-Seite hier nachziehen.
 - **Karriereseiten- und jobs.ch-Abruf laeuft jetzt komplett über GitHub
   Actions** (`.github/workflows/radar.yml`, werktags 07:00 Schweizer Zeit
   + `workflow_dispatch` für manuelle Läufe) — kein Agent mehr nötig für

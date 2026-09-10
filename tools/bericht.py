@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-bericht.py — tägliche Zusammenfassung: neue Jobs der letzten 3 Tage
+bericht.py — tägliche Zusammenfassung: neue Jobs der letzten 5 Tage
 (Übersicht) + eine mit der Claude API bewertete Shortlist der
 vielversprechendsten, veröffentlicht als GitHub Issue.
 
-Zwei Stufen, um Kosten und Rauschen klein zu halten:
-1. Regel-Vorfilter (Python, kostenlos): Rollen-Keywords und Ausschlüsse
-   aus CLAUDE.md, reduziert auf höchstens VORFILTER_CAP Kandidaten.
-2. Die Claude API bewertet genau diese Kandidaten inhaltlich
-   (STARK/MÖGLICH + Begründung) und wählt die Top SHORTLIST_GROESSE aus.
+**Kein Keyword-Raster.** Jan will keine Stelle durch einen starren
+Titel-Filter verlieren, den ein Python-Skript nie so nuanciert lesen kann
+wie eine Anzeige es verlangt -- deshalb sieht die Claude API JEDEN neuen
+Job aus der Übersicht und entscheidet selbst, was STARK/MÖGLICH ist. Die
+Shortlist hat KEINE feste Obergrenze -- so viele Treffer wie tatsächlich
+gut sind, nie künstlich auf eine Zahl gestutzt, aber auch nie aufgefüllt,
+wenn nichts passt. `SICHERHEITSDECKEL` ist keine Auswahl-Grenze, sondern
+nur ein Schutz gegen einen entgleisten Lauf (siehe dort).
 
-Die Übersicht ist UNGEFILTERT (alle neuen Jobs) -- nur die Shortlist geht
-durch den Vorfilter + die API. Ein Fehler in Schritt 2 (kein Secret, API
-nicht erreichbar) lässt die Übersicht trotzdem als Issue raus, nur ohne
-Shortlist-Abschnitt -- kein Grund, den ganzen Bericht zu unterschlagen.
+Die Übersicht ist UNGEFILTERT (alle neuen Jobs, letzte 5 Tage). Ein Fehler
+bei der Shortlist (kein Secret, API nicht erreichbar) lässt die Übersicht
+trotzdem als Issue raus, nur ohne Shortlist-Abschnitt -- kein Grund, den
+ganzen Bericht zu unterschlagen.
 
 Aufruf:  python tools/bericht.py
 Env:     ANTHROPIC_API_KEY, GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo,
@@ -27,32 +30,14 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, HERE)
 from radar import radius
 
-TAGE_UEBERSICHT = 3
-VORFILTER_CAP = 40
-SHORTLIST_GROESSE = 8
+TAGE_UEBERSICHT = 5
 CLAUDE_MODELL = "claude-sonnet-5"
-
-# Aus CLAUDE.md "Relevante Rollen" / "Nicht relevant" -- bei Aenderung dort
-# auch hier nachziehen. Bewusst keine automatische Extraktion aus dem
-# Prosa-Text, damit eine Formulierungsaenderung dort nicht lautlos den
-# Filter verstellt.
-ROLLEN_KEYWORDS = [
-    "business development", "head of sales", "vertriebsleiter", "commercial director",
-    "commercial excellence", "go-to-market", "go to market", "pricing",
-    "key account", "corporate development", "strategie", "head of strategy",
-    "strategieprojekt", "referent der geschäftsleitung", "m&a", "mergers",
-    "post merger", "post-merger", "transformation", "marketing-leitung",
-    "marketing leitung", "head of marketing", "product management", "product manager",
-    "sales director", "sales manager", "vertriebsleitung", "commercial",
-]
-NICHT_RELEVANT_KEYWORDS = [
-    "sachbearbeiter", "praktikant", "praktikum", "lehrstelle", "lehre als",
-    "trainee", "werkstudent", "servicetechniker", "einkäufer", "einkauf",
-    "qualitätsprüfer", "personalsachbearbeiter", "buchhalter",
-    "produktionsmitarbeiter", "montagemitarbeiter", "logistiker", "lagerist",
-    "elektroniker", "mechaniker", "monteur", "operator", "schichtleiter",
-    "ausbildung", "apprenti", "lehrling",
-]
+# NUR ein Schutz gegen Kosten/Kontext-Explosion an einem entgleisten Tag
+# (z.B. ein Erstlauf mit hunderten "neuen" Jobs). Im Normalbetrieb (ein
+# paar neue Jobs pro Tag) greift das nie. Wenn es doch greift, wird das
+# im Issue UND im Log sichtbar gemacht -- niemals stillschweigend
+# Kandidaten verschwinden lassen.
+SICHERHEITSDECKEL = 250
 
 def _vor_n_tagen(datum_str, tage):
     try:
@@ -67,17 +52,16 @@ def neue_jobs(state, tage=TAGE_UEBERSICHT):
     jobs.sort(key=lambda j: (j.get("erstmals", ""), j.get("firma", "")), reverse=True)
     return jobs
 
-def ist_rollen_relevant(titel):
-    t = (titel or "").lower()
-    if any(k in t for k in NICHT_RELEVANT_KEYWORDS):
-        return False
-    return any(k in t for k in ROLLEN_KEYWORDS)
-
-def vorfiltern(jobs, cap=VORFILTER_CAP):
-    kandidaten = [j for j in jobs if ist_rollen_relevant(j.get("titel", ""))]
-    kandidaten.sort(key=lambda j: (radius(j.get("kanton")) == "drin",
-                                    j.get("teil") == "1"), reverse=True)
-    return kandidaten[:cap]
+def kandidaten_fuer_api(jobs, deckel=SICHERHEITSDECKEL):
+    """Normalerweise identisch mit `jobs` -- nur an einem entgleisten Tag
+    (siehe SICHERHEITSDECKEL) wird tatsaechlich gekuerzt, und dann nach
+    Geografie/Zielfirmen-Zugehoerigkeit sortiert, damit die wahrschein-
+    licheren Treffer im gekuerzten Teil erhalten bleiben."""
+    if len(jobs) <= deckel:
+        return jobs, 0
+    sortiert = sorted(jobs, key=lambda j: (radius(j.get("kanton")) == "drin",
+                                            j.get("teil") == "1"), reverse=True)
+    return sortiert[:deckel], len(jobs) - deckel
 
 def profil_text():
     """Nur der fachliche Teil von CLAUDE.md (Profil/Kriterien), nicht die
@@ -105,13 +89,16 @@ def claude_shortlist(kandidaten):
     )
     prompt = (
         f"{profil_text()}\n\n"
-        f"Hier ist eine Liste neuer Stellenanzeigen (nur Titel/Firma/Ort, keine "
-        f"Volltexte). Waehle daraus die bis zu {SHORTLIST_GROESSE} vielversprechendsten "
-        f"fuer Jan aus -- nur wirklich gute Kandidaten (STARK oder starkes MOEGLICH), "
-        f"niemals auffuellen, wenn weniger passen. Fuer jede gewaehlte Stelle: "
-        f"Einstufung (STARK/MOEGLICH) und ein bis zwei Saetze Begruendung, warum sie "
-        f"passt und was auffaellt -- ehrlich, nicht beschoenigend, wie in den "
-        f"Projektregeln oben beschrieben.\n\n"
+        f"Hier ist die VOLLSTAENDIGE Liste der neuen Stellenanzeigen der letzten "
+        f"{TAGE_UEBERSICHT} Tage (nur Titel/Firma/Ort, keine Volltexte). Geh jede "
+        f"einzeln durch und waehle ALLE aus, die fuer Jan wirklich vielversprechend "
+        f"sind (STARK oder starkes MOEGLICH) -- keine feste Anzahl, keine Obergrenze. "
+        f"Sind es 2, gib 2 zurueck. Sind es 20 echte Treffer, gib 20 zurueck. "
+        f"Niemals auffuellen, wenn weniger passen, und keine Stelle uebergehen, "
+        f"die inhaltlich passt, nur weil der Titel ungewoehnlich formuliert ist. "
+        f"Fuer jede gewaehlte Stelle: Einstufung (STARK/MOEGLICH) und ein bis zwei "
+        f"Saetze Begruendung, warum sie passt und was auffaellt -- ehrlich, nicht "
+        f"beschoenigend, wie in den Projektregeln oben beschrieben.\n\n"
         f"Stellen:\n{liste}\n\n"
         f'Antworte NUR mit JSON, keine Erklaerung davor oder danach: '
         f'{{"shortlist": [{{"nr": 1, "einstufung": "STARK", "begruendung": "..."}}]}}\n'
@@ -128,10 +115,12 @@ def claude_shortlist(kandidaten):
             },
             json={
                 "model": CLAUDE_MODELL,
-                "max_tokens": 2000,
+                # Grosszuegig, weil die Shortlist keine Obergrenze hat --
+                # bei vielen echten Treffern darf die Antwort entsprechend lang sein.
+                "max_tokens": 8000,
                 "messages": [{"role": "user", "content": prompt}],
             },
-            timeout=90,
+            timeout=120,
         )
         r.raise_for_status()
         antwort = r.json()["content"][0]["text"].strip()
@@ -150,9 +139,16 @@ def claude_shortlist(kandidaten):
                           "begruendung": eintrag.get("begruendung", "")})
     return ergebnis, None
 
-def issue_markdown(uebersicht, shortlist, shortlist_fehler):
+def issue_markdown(uebersicht, shortlist, shortlist_fehler, uebersprungen=0):
     heute = date.today().isoformat()
     teile = [f"{len(uebersicht)} neue Stellen in den letzten {TAGE_UEBERSICHT} Tagen.\n"]
+    if uebersprungen:
+        teile.append(
+            f"\n> ⚠️ SICHERHEITSDECKEL gegriffen: {uebersprungen} Stellen wurden der "
+            f"Shortlist-Bewertung NICHT vorgelegt (siehe `tools/bericht.py`). "
+            f"Das ist ein Anzeichen fuer einen entgleisten Lauf, nicht der "
+            f"Normalfall -- bitte nachschauen.\n"
+        )
 
     teile.append("\n## Shortlist\n")
     if shortlist_fehler:
@@ -207,13 +203,16 @@ def main():
         state = json.load(f)
 
     uebersicht = neue_jobs(state)
-    kandidaten = vorfiltern(uebersicht)
+    kandidaten, uebersprungen = kandidaten_fuer_api(uebersicht)
+    if uebersprungen:
+        print(f"WARNUNG: SICHERHEITSDECKEL gegriffen, {uebersprungen} Stellen "
+              f"nicht an die Shortlist-Bewertung uebergeben.")
     shortlist, fehler = claude_shortlist(kandidaten)
-    print(f"{len(uebersicht)} neue Jobs, {len(kandidaten)} Kandidaten vorgefiltert, "
+    print(f"{len(uebersicht)} neue Jobs, {len(kandidaten)} der Shortlist-Bewertung vorgelegt, "
           f"{len(shortlist) if shortlist else 0} in der Shortlist"
           + (f" (Fehler: {fehler})" if fehler else ""))
 
-    body = issue_markdown(uebersicht, shortlist or [], fehler)
+    body = issue_markdown(uebersicht, shortlist or [], fehler, uebersprungen)
     titel = f"Job-Radar — {date.today().isoformat()}"
     issue_erstellen(titel, body)
 

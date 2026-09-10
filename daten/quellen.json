@@ -910,8 +910,8 @@
    "segment": "Sensorik/Automation",
    "jobs_ch_suchbegriff": "Baumer",
    "karriereseite": "https://jobs.baumer.com/",
-   "typ": "abrufbar",
-   "hinweis": ""
+   "typ": "js_only",
+   "hinweis": "nicht abrufbar ohne Rendern, Prospective-Widget"
   },
   {
    "nr": 77,

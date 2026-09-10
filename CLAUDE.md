@@ -145,13 +145,15 @@ voller Historie und ohne dass jemand sie bauen muss.
 - **Karriereseiten- und jobs.ch-Abruf ist jetzt automatisiert** (`abruf.py`,
   siehe README) — kein Agent mehr nötig für Schritt 2-4 der alten
   Übergabe. Der Playwright-Pfad (14 JS-only-Firmen) ist nur ausserhalb
-  dieser Sandbox getestet (siehe README, Abschnitt "Bekannte Lücke").
-  9 von 90 Karriereseiten/jobs.ch-Kombinationen lieferten beim Testlauf vom
-  10.09. `FEHLER — Struktur nicht erkannt` — die generische Heuristik
-  erkennt kein Job-Href-Muster; wer Zeit hat, kann für genau diese Firmen
-  einen eigenen Extractor in `fetch/` ergänzen: SGS, Stäubli, Accelleron,
-  Baumer, Interroll, Kistler (plus Hitachi Energy/Hilti: HTTP 403, Swatch:
-  Timeout — eher Bot-Abwehr als Strukturproblem).
+  dieser Sandbox getestet (siehe README, Abschnitt "Bekannte Lücke") —
+  `tools/test_js_lokal.py` einmal lokal laufen lassen, bevor du dich drauf
+  verlässt. Nach zwei Nachbesserungsrunden an der Extraktions-Heuristik
+  (SmartRecruiters-Job-IDs mitten im Pfad, Titel in Ueberschrift statt im
+  Link, Solique-Style relative Hrefs, "Job Coach"-Plattformwidget als
+  Fehltreffer) bleiben nur noch 4 von 89 Quellen mit Fehler: Hitachi
+  Energy/Hilti (HTTP 403, Bot-Abwehr), Swatch Group (Timeout), Kistler
+  (rendert nur sporadisch serverseitig — meist 0 Treffer, echtes
+  Playwright waere hier der naechste Schritt).
 - Priorisierung läuft jetzt über `daten/Zielliste_CH_Industrie.xlsx`
   (Spalte Prio) + `python tools/sync_quellen.py` — nicht mehr `quellen.json`
   von Hand editieren, das wird komplett überschrieben.

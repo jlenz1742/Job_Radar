@@ -27,6 +27,7 @@ RAUSCH_TEXT = {
     "read more", "learn more", "view all", "see all jobs", "all jobs", "all locations",
     "sign in", "sign up", "create account", "my account", "my profile", "talent community",
     "join talent community", "job alerts", "email me jobs", "save job", "saved jobs",
+    "job coach",  # jobs.ch-Plattformfeature, steht auf jeder Firmenprofilseite
     "find a job", "join our team", "job openings", "job areas", "recruitment process",
     "top artikel", "various", "english", "deutsch", "français", "italiano",
     # Facetten/Kategorie-Filter, die wie Linktext aussehen, aber keine Stelle sind
@@ -78,11 +79,14 @@ WORT = re.compile(r"[a-zA-ZäöüÄÖÜß]{2,}")
 # Stellen-Detailseiten fast aller ATS-Systeme haben eine Job-ID/Slug im Pfad:
 # ".../job/<titel>/<zahl>/", ".../jobs/<id>", ".../vacancy/12345" usw.
 JOB_HREF = re.compile(
-    r"/(job|jobs|stelle|stellen|vacature|vacatures|position|positions|"
+    r"(^|/)(job|jobs|stelle|stellen|vacature|vacatures|position|positions|"
     r"detail|vacancy|vacancies|opening|openings)(/|-|\?)",
     re.I,
 )
-JOB_ID_ENDE = re.compile(r"[/-]\d{5,}/?(\?.*)?$")
+# ".../job/<titel>/1234567/" (Tecan), ".../744000093298475-caldeireiro" (Smart-
+# Recruiters), "...--4042993" (Rieter/Solique, doppelter Strich) -- die
+# Job-ID kann nach "/" oder "-" stehen, optional gefolgt von einem Slug.
+JOB_ID_ENDE = re.compile(r"[/-]\d{5,}(-[^/]*)?/?(\?.*)?$")
 
 def _ist_rauschen(text):
     t = text.strip().lower()
@@ -114,16 +118,51 @@ def stellen_aus_html(html, basis_url, max_treffer=200, erlaube_generisch=False):
     wo der Aufrufer die Seite kennt) wird der Ruckfall trotzdem erlaubt."""
     soup = BeautifulSoup(html, "html.parser")
 
+    def titel_aus_umgebung(a):
+        """Manche Karten packen den Titel in eine Ueberschrift und lassen
+        den Link nur 'Details'/'Mehr' sagen (z.B. Interroll). Dann in den
+        umgebenden Containern (bis 5 Ebenen hoch) nach einer Ueberschrift
+        suchen, die zur selben Karte gehoert."""
+        knoten = a
+        for _ in range(5):
+            knoten = knoten.parent
+            if knoten is None or knoten.name in ("body", "html"):
+                break
+            h = knoten.find(["h1", "h2", "h3", "h4", "h5", "h6"])
+            if h:
+                t = h.get_text(" ", strip=True)
+                if t:
+                    return t
+        return None
+
+    TITEL_KLASSE = re.compile(r"job-?title|position-?title|vacancy-?title", re.I)
+
+    def roh_titel(a):
+        """Manche Karten packen Titel UND Abteilung/Pensum in denselben
+        <a>-Textblock (SmartRecruiters: h4.job-title + p.job-desc). Dann
+        lieber nur das spezifischere Titel-Element nehmen statt allem."""
+        spezifisch = a.find(["h1", "h2", "h3", "h4", "h5", "h6"]) or \
+                     a.find(class_=TITEL_KLASSE)
+        if spezifisch:
+            t = spezifisch.get_text(" ", strip=True)
+            if t:
+                return t
+        return a.get_text(" ", strip=True)
+
     def sammeln(pruefung):
         treffer, gesehen = [], set()
         for a in soup.find_all("a", href=True):
-            roh = a.get_text(" ", strip=True)
+            roh = roh_titel(a)
             href = a["href"].strip()
-            if not roh or not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
+            if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
                 continue
-            if len(roh) > 400:
+            if roh and len(roh) > 400:
                 continue
-            text = titel_bereinigen(roh)
+            text = titel_bereinigen(roh) if roh else ""
+            if (not text or _ist_rauschen(text)) and _ist_job_href(href):
+                ersatz = titel_aus_umgebung(a)
+                if ersatz:
+                    text = titel_bereinigen(ersatz)
             if not text or len(text) < 4 or len(text) > 140:
                 continue
             if not pruefung(text, href):

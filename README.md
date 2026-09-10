@@ -159,3 +159,14 @@ Proxy funktioniert einwandfrei. `curl`/`requests` sind nicht betroffen. Der
 JS-Pfad (`--kein-js` weglassen) ist deshalb nur auf einem normalen Rechner
 oder in GitHub Actions getestet, nicht in dieser Sandbox. Falls es doch mal
 dort laufen soll: zuerst `curl -x $HTTPS_PROXY https://example.com` pruefen.
+
+**Vor dem ersten echten Lauf mit JS-Firmen** (also ohne `--kein-js`) einmal
+pruefen, dass Playwright bei dir wirklich durchkommt:
+
+```bash
+playwright install chromium
+python tools/test_js_lokal.py
+```
+
+Testet 4 der 15 JS-only-Firmen (Workday + Eightfold) und sagt ehrlich, ob es
+am Mechanismus oder an der einzelnen Seite liegt, falls etwas schiefgeht.

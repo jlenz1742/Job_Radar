@@ -91,7 +91,7 @@ Länderfilter als URL-Parameter — bei Kistler funktionierte `?country=CH`.
 
 ## Actions
 
-`.github/workflows/radar.yml` läuft werktags 07:00 Schweizer Zeit
+`.github/workflows/radar.yml` läuft jeden Tag 09:00 Schweizer Zeit
 automatisch (und jederzeit manuell über "Run workflow"), gegengeprüft mit
 mehreren echten Läufen (10.09.2026). Ablauf:
 
@@ -120,18 +120,19 @@ Passwort des privaten Kontos verwenden.
 
 ## Tägliche Zusammenfassung — über eine Claude-Routine, nicht die Action
 
-Übersicht (neue Jobs, letzte 5 Tage, ungefiltert) + Shortlist (jeder neue
-Job einzeln gegen `CLAUDE.md` bewertet, STARK/MÖGLICH + Begründung,
-**keine feste Obergrenze**, nie aufgefüllt) als GitHub Issue
-"Job-Radar — <Datum>".
+Statistik (Kennzahlen des letzten Laufs aus `state.json`) + Übersicht
+(neue Jobs, letzte 5 Tage, ungefiltert, exklusive Bootstrap-Bestand vor
+dem `BOOTSTRAP_STICHTAG`) + Shortlist (jeder neue Job einzeln gegen
+`CLAUDE.md` bewertet, STARK/MÖGLICH + Begründung, **keine feste
+Obergrenze**, nie aufgefüllt) als GitHub Issue "Job-Radar — <Datum>".
 
 Das läuft bewusst **nicht** als Schritt im GitHub-Workflow, sondern über
-eine geplante Claude-Code-Routine (Zeitplan werktags, kurz nach dem
-Actions-Lauf) — kein `ANTHROPIC_API_KEY`-Secret nötig, weil die
-Bewertung über die ohnehin laufende Claude-Session passiert statt über
-separat abgerechnete API-Calls. Kein Keyword-Vorfilter, damit keine
-Stelle durch ein starres Python-Raster verloren geht, bevor sie überhaupt
-gesehen wird — jeder Job wird einzeln gelesen.
+eine geplante Claude-Code-Routine — jeden Tag, mit Puffer nach dem
+Actions-Lauf (09:00 Schweizer Zeit) — kein `ANTHROPIC_API_KEY`-Secret
+nötig, weil die Bewertung über die ohnehin laufende Claude-Session
+passiert statt über separat abgerechnete API-Calls. Kein Keyword-
+Vorfilter, damit keine Stelle durch ein starres Python-Raster verloren
+geht, bevor sie überhaupt gesehen wird — jeder Job wird einzeln gelesen.
 
 `tools/bericht.py` bleibt im Repo für lokale Tests/als Referenz
 (inkl. der ursprünglichen API-basierten Variante, falls später doch

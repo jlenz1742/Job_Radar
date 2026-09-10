@@ -162,7 +162,7 @@ voller Historie und ohne dass jemand sie bauen muss.
   bleibt im Repo als Referenz/fuer lokale Tests, wird aber vom Workflow
   nicht mehr aufgerufen.
 - **Karriereseiten- und jobs.ch-Abruf laeuft jetzt komplett über GitHub
-  Actions** (`.github/workflows/radar.yml`, werktags 07:00 Schweizer Zeit
+  Actions** (`.github/workflows/radar.yml`, jeden Tag 09:00 Schweizer Zeit
   + `workflow_dispatch` für manuelle Läufe) — kein Agent mehr nötig für
   Schritt 2-4 der alten Übergabe, und kein lokaler Rechner mehr nötig.
   Zwei echte Action-Läufe am 10.09. bestätigt: **Playwright funktioniert

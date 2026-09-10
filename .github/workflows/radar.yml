@@ -2,7 +2,7 @@ name: Job-Radar
 
 on:
   schedule:
-    - cron: '0 5 * * 1-5'      # werktags 07:00 Schweizer Zeit (Sommerzeit)
+    - cron: '0 7 * * *'        # jeden Tag 09:00 Schweizer Zeit (Sommerzeit, UTC+2)
   workflow_dispatch:            # manuell ausloesbar, z.B. zum Testen
 
 permissions:

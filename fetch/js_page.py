@@ -16,6 +16,46 @@ BROWSERS_PATH = os.environ.get("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers")
 # das laedt eine neue, doppelte Kopie herunter) -- deshalb Pfad fest verdrahtet.
 CHROMIUM_BIN = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 
+# Bekannte Cookie-Consent-Systeme (OneTrust, Cookiebot, Usercentrics,
+# Sourcepoint, ...) haben stabile IDs -- die zuerst versuchen (schnell,
+# praezise), danach Text-Suche als Rueckfall fuer alles Custom-Gebaute.
+# Manche CMPs haengen ihr Banner in ein IFrame, deshalb ueber page.frames
+# iterieren, nicht nur den Hauptframe pruefen.
+COOKIE_SELEKTOREN = [
+    "#onetrust-accept-btn-handler",
+    "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+    "#CybotCookiebotDialogBodyButtonAccept",
+    "[data-testid='uc-accept-all-button']",
+    ".sp_choice_type_11",
+    "button[aria-label='Accept all']",
+    "button[aria-label='Alle akzeptieren']",
+    "#accept-cookies", "#cookie-accept", "#gdpr-accept", "#consent-accept",
+]
+COOKIE_TEXTE = [
+    "Accept All", "Accept all", "Accept", "Alle akzeptieren", "Akzeptieren",
+    "Zustimmen", "Einverstanden", "Verstanden", "I Agree", "I agree",
+    "Alle Cookies akzeptieren", "Allow all", "Allow all cookies",
+    "Alle zulassen", "Got it", "Ich stimme zu",
+]
+
+def _cookie_banner_wegklicken(page):
+    """True, wenn irgendwo ein Cookie-Banner gefunden und weggeklickt wurde."""
+    rahmen = [page] + page.frames
+    for f in rahmen:
+        for sel in COOKIE_SELEKTOREN:
+            try:
+                f.locator(sel).first.click(timeout=600)
+                return True
+            except Exception:
+                continue
+        for text in COOKIE_TEXTE:
+            try:
+                f.get_by_text(text, exact=False).first.click(timeout=600)
+                return True
+            except Exception:
+                continue
+    return False
+
 class BrowserPool:
     """Ein Chromium-Prozess für alle JS-Abrufe eines Laufs."""
     def __enter__(self):
@@ -44,14 +84,7 @@ class BrowserPool:
         )
         try:
             page.goto(url, timeout=timeout, wait_until="networkidle")
-            # Cookie-Banner sind der häufigste Grund, warum sonst nichts sichtbar ist.
-            for text in ("Accept", "Akzeptieren", "Alle akzeptieren", "Zustimmen",
-                          "Accept All", "I Agree", "Alle Cookies akzeptieren"):
-                try:
-                    page.get_by_text(text, exact=False).first.click(timeout=1500)
-                    break
-                except Exception:
-                    continue
+            _cookie_banner_wegklicken(page)
             if warten_auf:
                 try:
                     page.wait_for_selector(warten_auf, timeout=timeout)
@@ -59,6 +92,13 @@ class BrowserPool:
                     pass
             else:
                 page.wait_for_timeout(2500)  # Nachladen nach dem ersten Render
+            # Eightfold & Co. laden ihre Stellenliste oft erst beim Scrollen
+            # nach (Lazy Loading/Virtualisierung) -- einmal runter, kurz warten.
+            try:
+                page.mouse.wheel(0, 3000)
+                page.wait_for_timeout(1500)
+            except Exception:
+                pass
             html = page.content()
         except Exception as e:
             return [], f"FEHLER — {type(e).__name__}: {e}"[:120]

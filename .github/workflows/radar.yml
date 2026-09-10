@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write        # fuer die taegliche Zusammenfassung als Issue
 
 jobs:
   radar:
@@ -28,18 +29,16 @@ jobs:
       - name: Karriereseiten + jobs.ch abrufen
         run: python abruf.py run --prio 1 --pause 1 | tee abruf.log
 
-      - name: Alert-Mails auslesen (nur wenn Secrets gesetzt sind)
+      # Laeuft immer -- parser/mail.py faengt IMAP-Fehler (auch fehlende
+      # Secrets) selbst ab und liefert dann nur einen FEHLER-Eintrag statt
+      # abzustuerzen (sichtbar im Quellen-Waechter unten, kein stiller Ausfall).
+      - name: Alert-Mails auslesen
         env:
           IMAP_USER: ${{ secrets.IMAP_USER }}
           IMAP_PASS: ${{ secrets.IMAP_PASS }}
         run: |
-          if [ -z "$IMAP_USER" ] || [ -z "$IMAP_PASS" ]; then
-            echo "IMAP_USER/IMAP_PASS nicht gesetzt -- Mail-Schritt wird übersprungen."
-            echo "Secrets anlegen unter: Repo-Settings -> Secrets and variables -> Actions"
-          else
-            python parser/mail.py --seit 2 --out lauf_mail.json
-            python radar.py ingest lauf_mail.json | tee -a abruf.log
-          fi
+          python parser/mail.py --seit 2 --out lauf_mail.json
+          python radar.py ingest lauf_mail.json | tee -a abruf.log
 
       - name: Excel neu bauen
         run: python radar.py excel Job_Radar.xlsx
@@ -51,6 +50,18 @@ jobs:
           git add state.json Job_Radar.xlsx laeufe/
           git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d)"
           git push
+
+      # Uebersicht (neue Jobs, letzte 3 Tage) + Shortlist (Claude-Bewertung
+      # der vorgefilterten Kandidaten gegen Jans Profil aus CLAUDE.md) als
+      # GitHub Issue. Eigener Schritt, eigenes try/except im Skript -- ein
+      # API-Fehler hier soll den Lauf nicht rot machen, der Kern (Daten
+      # abrufen + committen) ist zu dem Zeitpunkt schon durch.
+      - name: Taegliche Zusammenfassung
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python tools/bericht.py
 
       # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen -- aber nur
       # bei NEUEN Fehlern. Ein paar Quellen sind dauerhaft durch Bot-Abwehr

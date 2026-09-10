@@ -91,24 +91,57 @@ Länderfilter als URL-Parameter — bei Kistler funktionierte `?country=CH`.
 
 ## Actions
 
-`.github/workflows/radar.yml` ist ein **Entwurf und ungetestet**. Er deckt nur
-den Mail-Weg ab: Alert-Mails aus dem jobradar-Postfach per IMAP lesen, in das
-Fundformat übersetzen, einlesen, Ergebnis committen.
+`.github/workflows/radar.yml` läuft werktags 07:00 Schweizer Zeit
+automatisch (und jederzeit manuell über "Run workflow"), gegengeprüft mit
+mehreren echten Läufen (10.09.2026). Ablauf:
 
-Nötige Secrets:
+1. Karriereseiten + jobs.ch abrufen (`abruf.py`, inkl. Playwright für die
+   JS-only-Firmen — läuft auf dem GitHub-Runner einwandfrei)
+2. Alert-Mails auslesen (`parser/mail.py`) — läuft immer mit, ein
+   IMAP-Fehler bricht den restlichen Lauf nicht ab
+3. `Job_Radar.xlsx` neu bauen, `state.json` + Excel + `laeufe/`-Rohdaten committen
+4. **Tägliche Zusammenfassung** (`tools/bericht.py`) als GitHub Issue:
+   Übersicht aller neuen Stellen der letzten 3 Tage + eine von der Claude
+   API bewertete Shortlist der vielversprechendsten (siehe unten)
+5. Quellen-Wächter: schlägt nur fehl, wenn eine NEUE, unbekannte Quelle
+   ausfällt (bekannte Bot-Abwehr-Fälle stehen in `daten/bekannte_fehler.txt`)
+
+Nötige Secrets (Repo-Settings → Secrets and variables → Actions):
 
 - `IMAP_USER` — jan.jobradar@gmail.com
 - `IMAP_PASS` — Google-App-Passwort
+- `ANTHROPIC_API_KEY` — für die Shortlist-Bewertung in `tools/bericht.py`
 
-**Sicherheitshinweis:** Ein App-Passwort im Repo-Secret gewährt vollen Zugriff
-auf dieses Postfach. Weil das jobradar-Konto ausschliesslich für diesen Zweck
-existiert und keine private Korrespondenz enthält, ist das Risiko begrenzt —
-aber es ist eine bewusste Entscheidung, keine Formalie. Niemals das Passwort
-des privaten Kontos verwenden.
+Fehlt eines davon, degradiert der jeweilige Schritt sauber (Mail-Fehler
+sichtbar im Log, Shortlist fällt weg, Übersicht bleibt trotzdem im Issue) —
+nichts davon bricht den ganzen Lauf ab.
 
-Der Mail-Parser (`parser/mail.py`) ist gebaut — siehe `parser/README.md`.
-Der Workflow braucht ihn noch nicht zu erwähnen, weil er unabhängig davon
-auch von Hand läuft.
+**Sicherheitshinweis zum App-Passwort:** Es gewährt vollen Zugriff auf das
+jobradar-Postfach. Weil das Konto ausschliesslich für diesen Zweck
+existiert und keine private Korrespondenz enthält, ist das Risiko begrenzt
+— aber es ist eine bewusste Entscheidung, keine Formalie. Niemals das
+Passwort des privaten Kontos verwenden.
+
+## tools/bericht.py — tägliche Zusammenfassung
+
+Liest `state.json`, filtert Jobs mit `erstmals` in den letzten 3 Tagen
+(**ungefiltert** — das ist die Übersicht), wendet dann für die Shortlist
+einen Regel-Vorfilter an (Rollen-Keywords/Ausschlüsse aus `CLAUDE.md`,
+Geografie leicht bevorzugt, Deckel bei 40 Kandidaten) und schickt genau
+diese Kandidaten an die Claude API zur inhaltlichen Bewertung
+(STARK/MÖGLICH + Begründung, maximal 8, nie aufgefüllt). Ergebnis: ein
+GitHub Issue "Job-Radar — <Datum>".
+
+Ohne `ANTHROPIC_API_KEY` erscheint die Übersicht trotzdem, nur ohne
+Shortlist-Abschnitt (mit Hinweis warum). Lokal testen:
+
+```bash
+ANTHROPIC_API_KEY=... python tools/bericht.py   # legt ein echtes Issue an!
+```
+
+Ohne `GITHUB_TOKEN`/`GITHUB_REPOSITORY` wird kein Issue angelegt, das
+Markdown landet stattdessen auf der Konsole — so lässt sich der Bericht
+gefahrlos lokal probelesen.
 
 ## abruf.py — der eigenständige Abruf (kein Agent nötig)
 

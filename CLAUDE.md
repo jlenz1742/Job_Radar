@@ -141,13 +141,21 @@ voller Historie und ohne dass jemand sie bauen muss.
 
 ## Offene Punkte
 
-- **`parser/mail.py` ist gebaut** — Alert-Mails von jobs.ch und LinkedIn
-  per IMAP (nur lesend, siehe Regel 1 oben) ins Fundformat übersetzt.
-  Gegen echte Mails aus dem Postfach getestet (`tests/test_mail_parser.py`).
-  Einschränkung: bisher existieren nur jobs.ch-"Alert wurde aktiv"-Mails,
-  kein laufendes "N neue Jobs"-Digest — falls das Format davon abweicht,
-  Mail dazulegen statt zu raten. `radar.yml` (Actions) ruft es schon auf,
-  aber ungetestet, siehe README-Abschnitt "Actions".
+- **`parser/mail.py` ist gebaut und läuft bei jedem Actions-Lauf mit** —
+  Alert-Mails von jobs.ch und LinkedIn per IMAP (nur lesend, siehe Regel 1
+  oben) ins Fundformat übersetzt. Gegen echte Mails aus dem Postfach
+  getestet (`tests/test_mail_parser.py`). IMAP-Fehler (auch fehlendes
+  Secret) brechen den Lauf nicht mehr ab, sondern werden wie jede andere
+  Quelle als Alarm sichtbar. Einschränkung: bisher existieren nur
+  jobs.ch-"Alert wurde aktiv"-Mails, kein laufendes "N neue Jobs"-Digest —
+  falls das Format davon abweicht, Mail dazulegen statt zu raten.
+- **`tools/bericht.py` — tägliche Zusammenfassung als GitHub Issue.**
+  Übersicht (neue Jobs, letzte 3 Tage, ungefiltert) + Shortlist
+  (Regel-Vorfilter, dann Claude API bewertet die Kandidaten inhaltlich
+  gegen das Profil oben, max. 8, nie aufgefüllt). Braucht
+  `ANTHROPIC_API_KEY` als Secret; ohne das erscheint die Übersicht
+  trotzdem, nur ohne Shortlist. Modell: `claude-sonnet-5` — bei einer
+  Modellumbenennung auf Anthropic-Seite hier nachziehen.
 - **Karriereseiten- und jobs.ch-Abruf laeuft jetzt komplett über GitHub
   Actions** (`.github/workflows/radar.yml`, werktags 07:00 Schweizer Zeit
   + `workflow_dispatch` für manuelle Läufe) — kein Agent mehr nötig für

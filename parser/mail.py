@@ -155,7 +155,7 @@ def _body_text(msg):
 def hole_mails(seit_tagen):
     user, pw = os.environ.get("IMAP_USER"), os.environ.get("IMAP_PASS")
     if not user or not pw:
-        sys.exit("IMAP_USER/IMAP_PASS nicht gesetzt.")
+        raise RuntimeError("IMAP_USER/IMAP_PASS nicht gesetzt")
 
     m = imaplib.IMAP4_SSL(IMAP_HOST)
     m.login(user, pw)
@@ -201,7 +201,14 @@ def main():
     ap.add_argument("--out", default="lauf_mail.json")
     args = ap.parse_args()
 
-    funde, quellen = hole_mails(args.seit)
+    try:
+        funde, quellen = hole_mails(args.seit)
+    except Exception as e:
+        # Nicht abstuerzen -- IMAP-Login/Netzwerk sind Ausfaelle wie jede
+        # andere Quelle. Sichtbar im radar.py-Alarm, aber der Rest des
+        # Laufs (Karriereseiten, Excel, Commit) soll trotzdem durchlaufen.
+        funde, quellen = [], {"mail-postfach": f"FEHLER — {type(e).__name__}: {e}"[:150]}
+
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump({"funde": funde, "quellen": quellen}, f, ensure_ascii=False, indent=1)
     print(f"{args.out} geschrieben | {len(funde)} Funde aus {len(quellen)} Alert(s)")

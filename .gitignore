@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+lauf.json
+lauf.log

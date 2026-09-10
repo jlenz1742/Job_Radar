@@ -1,0 +1,1595 @@
+{
+ "version": 1,
+ "laeufe": [
+  {
+   "ts": "2026-09-10T16:02:01+00:00",
+   "funde": 54,
+   "neu": 0,
+   "weg": 0,
+   "bestand": 54,
+   "alarme": [
+    "Hilti: FEHLER — job search unavailable",
+    "Santrade (Sandvik): FEHLER — Laenderfilter nicht ansteuerbar"
+   ]
+  }
+ ],
+ "jobs": {
+  "stadler rail|head of strategy business development division service": {
+   "firma": "Stadler Rail",
+   "titel": "Head of Strategy & Business Development Division Service",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "quelle": "Karriereseite",
+   "quelle_id": "Stadler Rail",
+   "url": "https://jobs.stadlerrail.ch/offene-stellen/service-kaufmaennische-berufe/head-of-strategy-business-development-division-service/ea7d70d8-dd05-4840-8728-90fc1d701e20",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "NEIN",
+   "notiz": "Bewerbung laeuft bereits",
+   "key": "stadler rail|head of strategy business development division service",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "stadler rail|project manager strategic projects": {
+   "firma": "Stadler Rail",
+   "titel": "Project Manager Strategic Projects",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "quelle": "Karriereseite",
+   "quelle_id": "Stadler Rail",
+   "url": "https://jobs.stadlerrail.ch/offene-stellen/projektmanagement/project-manager-strategic-projects/ffb161ee-9d7e-4351-ae7b-5d8c5fad493b",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "STARK",
+   "consulting": "NEIN",
+   "notiz": "Verlangt BWL-Ausrichtung; Stabsstelle ohne Fuehrung; 20-40% Reisen",
+   "key": "stadler rail|project manager strategic projects",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "tecan|vp commercial operations emea": {
+   "firma": "Tecan",
+   "titel": "VP Commercial Operations EMEA",
+   "ort": "Maennedorf",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Tecan",
+   "url": "https://careers.tecan.com/job/VP-Commercial-Operations-EMEA/1434959133/",
+   "publiziert": "2026-09-08",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Chemie-/Biologiestudium, Life-Sciences-Senior-Sales, Turnaround-Track-Record, >50% Reisen",
+   "key": "tecan|vp commercial operations emea",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "tecan|senior manager key account products": {
+   "firma": "Tecan",
+   "titel": "Senior Manager Key Account Products",
+   "ort": "Maennedorf",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Tecan",
+   "url": "https://careers.tecan.com/job/Senior-Manager-Key-Account-Products/1413947533/",
+   "publiziert": "2026-09-06",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "5+ Jahre Systementwicklung/PLM, Liquid Handling/Diagnostik",
+   "key": "tecan|senior manager key account products",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "tecan|regional channel sales distributors manager emea": {
+   "firma": "Tecan",
+   "titel": "Regional Channel Sales & Distributors Manager EMEA",
+   "ort": "Maennedorf",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Tecan",
+   "url": "https://careers.tecan.com/job/Regional-Channel-Sales-&-Distributors-Manager-EMEA/1411946533/",
+   "publiziert": "2026-09-02",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Eigene Quote, Distributorennetz-Track-Record, 50-70% Reisen",
+   "key": "tecan|regional channel sales distributors manager emea",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "tecan|marketing manager partnering business": {
+   "firma": "Tecan",
+   "titel": "Marketing Manager Partnering Business",
+   "ort": "Maennedorf",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Tecan",
+   "url": "https://careers.tecan.com/job/Marketing-Manager-Partnering-Business/1423079133/",
+   "publiziert": "2026-09-02",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Operatives SEM/CRM-Handwerk, Marketing-Abschluss",
+   "key": "tecan|marketing manager partnering business",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "tecan|head software product manager lab automation liquid handling": {
+   "firma": "Tecan",
+   "titel": "Head Software Product Manager Lab Automation & Liquid Handling",
+   "ort": "Maennedorf",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Tecan",
+   "url": "https://careers.tecan.com/job/Head-Software-Product-Manager-Lab-Automation-&-Liquid-Handling/1403393933/",
+   "publiziert": "2026-09-02",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Softwarelastig",
+   "key": "tecan|head software product manager lab automation liquid handling",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "vat|sector manager go to market": {
+   "firma": "VAT Group",
+   "titel": "Sector Manager Go-to-Market",
+   "ort": "Haag SG",
+   "kanton": "SG",
+   "quelle": "Karriereseite",
+   "quelle_id": "VAT Group",
+   "url": "https://careers.vatvalve.com/job/Haag-Sector-Manager-Go-to-Market-St_/1360366055/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "MOEGLICH",
+   "consulting": "NEIN",
+   "notiz": "4+ Jahre B2B Sales/Channel; Aufbau internationaler Partnernetze verlangt; Haag ab Meilen 1.5h",
+   "key": "vat|sector manager go to market",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "vat|global strategic account manager semiconductors": {
+   "firma": "VAT Group",
+   "titel": "Global Strategic Account Manager (Semiconductors)",
+   "ort": "Haag SG",
+   "kanton": "SG",
+   "quelle": "Karriereseite",
+   "quelle_id": "VAT Group",
+   "url": "https://careers.vatvalve.com/job/Haag-Global-Strategic-Account-Manager-%28Semiconductors%29-St_/1354886055/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "vat|global strategic account manager semiconductors",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "baumer|leiter business unit sensorik": {
+   "firma": "Baumer Group",
+   "titel": "Leiter Business Unit Sensorik",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Baumer Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/b433ce5b-f5cd-4cfd-8e55-8bfb98ddeca6/",
+   "publiziert": "2026-08-11",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Verlangt bereits gefuehrte Geschaeftsbereiche mit P&L-Verantwortung",
+   "key": "baumer|leiter business unit sensorik",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "baumer|head of sales central europe": {
+   "firma": "Baumer Group",
+   "titel": "Head of Sales Central Europe",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Baumer Group",
+   "url": "https://www.jobs.ch/en/vacancies/detail/4d281557-0da6-4b7c-8e0a-4b4f946e31da/",
+   "publiziert": "2026-07-07",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Fuehrungs- UND Vertriebserfahrung verlangt; ueber 2 Monate alt",
+   "key": "baumer|head of sales central europe",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "baumer|business development manager motion control": {
+   "firma": "Baumer Group",
+   "titel": "Business Development Manager Motion Control",
+   "ort": "Frauenfeld",
+   "kanton": "TG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Baumer Group",
+   "url": "https://www.jobs.ch/en/vacancies/detail/3050ce67-1af2-466b-8277-b24fc039a315/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "baumer|business development manager motion control",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "leica geosystems|marketing director reality capture hardware business": {
+   "firma": "Leica Geosystems",
+   "titel": "Marketing Director Reality Capture Hardware Business",
+   "ort": "Heerbrugg",
+   "kanton": "SG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Leica Geosystems",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/80f689f1-a05d-48ff-9f4f-079afc98f44b/",
+   "publiziert": "2026-08-21",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "jobs.ch-Beschreibung defekt, Inhalt nicht pruefbar",
+   "key": "leica geosystems|marketing director reality capture hardware business",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "leica geosystems|product marketing manager": {
+   "firma": "Leica Geosystems",
+   "titel": "Product Marketing Manager",
+   "ort": "Heerbrugg",
+   "kanton": "SG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Leica Geosystems",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/edc126b0-c914-4c4a-8132-7de04ab03f4c/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "leica geosystems|product marketing manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "leica geosystems|teamleiter consultative sales fuer naturgefahren": {
+   "firma": "Leica Geosystems",
+   "titel": "Teamleiter Consultative-Sales fuer Naturgefahren",
+   "ort": "Zuerich",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Leica Geosystems",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/f4928ab2-1976-4ddd-b3d2-961c31b885a8/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "leica geosystems|teamleiter consultative sales fuer naturgefahren",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "leister|business development manager industrial heating": {
+   "firma": "Leister",
+   "titel": "Business Development Manager Industrial Heating",
+   "ort": "Kaegiswil",
+   "kanton": "OW",
+   "quelle": "jobs.ch",
+   "quelle_id": "Leister",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/bf411469-2471-4fcb-9e89-b91d78da0617/",
+   "publiziert": "2026-08-20",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Operative Aussendienst-/Channel-Rolle; Kaegiswil ab Meilen 1h20",
+   "key": "leister|business development manager industrial heating",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "u blox|senior director of product strategy and support": {
+   "firma": "u-blox",
+   "titel": "Senior Director of Product Strategy and Support",
+   "ort": "Thalwil",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "u-blox",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/797eba99-e25d-42ee-8198-63b2ed028c14/",
+   "publiziert": "2026-07-10",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "GNSS-/Halbleiter-PM zwingend, CRM-Praxis verpflichtend",
+   "key": "u blox|senior director of product strategy and support",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "kistler|marketing manager": {
+   "firma": "Kistler Gruppe",
+   "titel": "Marketing Manager",
+   "ort": "Winterthur",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Kistler Gruppe",
+   "url": "https://www.kistler.com/CH/de/marketing-manager-w-m-d-100-/job/3723",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "kistler.com sperrt Abruf per robots.txt, Inhalt ungeprueft",
+   "key": "kistler|marketing manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "geberit|product manager international installation systems": {
+   "firma": "Geberit",
+   "titel": "Product Manager International Installation Systems",
+   "ort": "Jona",
+   "kanton": "SG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Geberit",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/0c440dbc-347f-458b-9a8e-ad4a670c16f8/",
+   "publiziert": "2026-08-11",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Laterale Fuehrung ohne Disziplinarverantwortung",
+   "key": "geberit|product manager international installation systems",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "holcim|global head of specification selling": {
+   "firma": "Holcim",
+   "titel": "Global Head of Specification Selling",
+   "ort": "Zug",
+   "kanton": "ZG",
+   "quelle": "Karriereseite",
+   "quelle_id": "Holcim",
+   "url": "https://careers.holcimgroup.com/job/Zug-Global-Head-of-Specification-Selling-6300/1367627357/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "8+ Jahre; Track Record specifically in specification selling; Bau-/Immobilienbranche",
+   "key": "holcim|global head of specification selling",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "liebherr baumaschinen|business development manager": {
+   "firma": "Liebherr-Baumaschinen",
+   "titel": "Business Development Manager",
+   "ort": "Reiden",
+   "kanton": "LU",
+   "quelle": "Karriereseite",
+   "quelle_id": "Liebherr",
+   "url": "https://www.liebherr.com/de-ch/j/karriere/offene-stellen/84446-de-3714359",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "MOEGLICH",
+   "consulting": "NEIN",
+   "notiz": "Inhaltlich Volltreffer, aber Zuschnitt auf 1-3 Jahre Erfahrung",
+   "key": "liebherr baumaschinen|business development manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "hitachi energy|territory sales marketing manager": {
+   "firma": "Hitachi Energy",
+   "titel": "Territory Sales & Marketing Manager",
+   "ort": "Zuerich",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Hitachi Energy",
+   "url": "https://careers.hitachi.com/jobs/18114148-territory-sales-and-marketing-manager-80-100-percent-f-slash-m-slash-d",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "hitachi energy|territory sales marketing manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "hitachi energy|senior service sales manager": {
+   "firma": "Hitachi Energy",
+   "titel": "Senior Service Sales Manager",
+   "ort": "Zuerich",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Hitachi Energy",
+   "url": "https://careers.hitachi.com/jobs/18044026-senior-service-sales-manager",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "hitachi energy|senior service sales manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "abb|sales manager panel builders": {
+   "firma": "ABB",
+   "titel": "Sales Manager Panel Builders",
+   "ort": "Baden",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "ABB",
+   "url": "https://www.jobs.ch/en/vacancies/detail/7cf0a673-68f8-42c5-8f36-a2eca96c273d/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "abb|sales manager panel builders",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "schindler|global finance transformation manager": {
+   "firma": "Schindler",
+   "titel": "Global Finance Transformation Manager",
+   "ort": "Ebikon",
+   "kanton": "LU",
+   "quelle": "Karriereseite",
+   "quelle_id": "Schindler",
+   "url": "https://job.schindler.com/Schindler/job/Ebikon-Global-Finance-Transformation-Manager-%28mfd%29-100-Luce/1431143333/",
+   "publiziert": "2026-08-27",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Finanzlastig",
+   "key": "schindler|global finance transformation manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "komax|global service excellence manager": {
+   "firma": "Komax",
+   "titel": "Global Service Excellence Manager",
+   "ort": "Dierikon",
+   "kanton": "LU",
+   "quelle": "jobs.ch",
+   "quelle_id": "Komax",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/67a72a8b-abc2-4b52-8b47-d04f20cec3f9/",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Grenzfall: Service Excellence, nicht Commercial Excellence",
+   "key": "komax|global service excellence manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "ferag|sales manager": {
+   "firma": "Ferag",
+   "titel": "Sales Manager",
+   "ort": "Hinwil",
+   "kanton": "ZH",
+   "quelle": "Karriereseite",
+   "quelle_id": "Ferag (WRH)",
+   "url": "https://recruitingapp-2970.umantis.com/Vacancies/769/Description/1",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "SCHWACH",
+   "consulting": "",
+   "notiz": "Verlangt technische Grundausbildung und Druckbranchenerfahrung",
+   "key": "ferag|sales manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "united grinding|gebietsverkaufsleiter regional sales manager": {
+   "firma": "United Grinding",
+   "titel": "Gebietsverkaufsleiter / Regional Sales Manager",
+   "ort": "Goldach",
+   "kanton": "SG",
+   "quelle": "jobs.ch",
+   "quelle_id": "UNITED GRINDING Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/7d6ab3ab-723e-49d9-adb6-e6a60a6b8870/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "united grinding|gebietsverkaufsleiter regional sales manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "skan|senior product manager aseptische prozesse": {
+   "firma": "SKAN Group",
+   "titel": "Senior Product Manager aseptische Prozesse",
+   "ort": "Allschwil",
+   "kanton": "BL",
+   "quelle": "jobs.ch",
+   "quelle_id": "SKAN Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/31136e3a-d97a-463e-9537-7f13703ce604/",
+   "publiziert": "2026-09-10",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "skan|senior product manager aseptische prozesse",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "ammann|spare parts pricing manager": {
+   "firma": "Ammann Group",
+   "titel": "Spare Parts Pricing Manager",
+   "ort": "Langenthal",
+   "kanton": "BE",
+   "quelle": "jobs.ch",
+   "quelle_id": "Ammann Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/50a2ec8e-d94a-483b-bc9f-805a390c206b/",
+   "publiziert": "2026-09-09",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "STARK",
+   "consulting": "NEIN",
+   "notiz": "Fachlich Simon-Kucher-Mandat; Fachrolle ohne Fuehrung, SAP-/Power-BI-Anteil",
+   "key": "ammann|spare parts pricing manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "medmix|commercial excellence specialist dental bu": {
+   "firma": "medmix",
+   "titel": "Commercial Excellence Specialist Dental BU",
+   "ort": "Haag",
+   "kanton": "SG",
+   "quelle": "jobs.ch",
+   "quelle_id": "medmix",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/a970b22f-226a-42ff-b7df-e1ea3c480c69/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Specialist-Stufe unter Zielniveau",
+   "key": "medmix|commercial excellence specialist dental bu",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "sauter building control|directeur region ouest": {
+   "firma": "Sauter Building Control",
+   "titel": "Directeur Region Ouest",
+   "ort": "Renens",
+   "kanton": "VD",
+   "quelle": "jobs.ch",
+   "quelle_id": "SAUTER Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/4eb0687e-f771-4e65-a41a-badf9c976094/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "sauter building control|directeur region ouest",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "alstom|site tenders projects director": {
+   "firma": "ALSTOM",
+   "titel": "Site Tenders & Projects Director",
+   "ort": "Villeneuve",
+   "kanton": "VD",
+   "quelle": "Karriereseite",
+   "quelle_id": "ALSTOM (Schweiz)",
+   "url": "https://jobsearch.alstom.com/search/?q=&locationsearch=Switzerland",
+   "publiziert": "2026-08-27",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "alstom|site tenders projects director",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "hitachi energy|senior service sales manager satigny": {
+   "firma": "Hitachi Energy",
+   "titel": "Senior Service Sales Manager Satigny",
+   "ort": "Satigny",
+   "kanton": "GE",
+   "quelle": "Karriereseite",
+   "quelle_id": "Hitachi Energy",
+   "url": "https://careers.hitachi.com/jobs/18044028-senior-service-sales-manager",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "hitachi energy|senior service sales manager satigny",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "swatch|sales marketing manager swiss market": {
+   "firma": "Swatch Group",
+   "titel": "Sales & Marketing Manager Swiss Market",
+   "ort": "Le Locle",
+   "kanton": "NE",
+   "quelle": "Karriereseite",
+   "quelle_id": "Swatch Group",
+   "url": "https://www.swatchgroup.com/en/job-finder",
+   "publiziert": "",
+   "prio": "1",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "swatch|sales marketing manager swiss market",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "sefar|sales manager": {
+   "firma": "Sefar Group",
+   "titel": "Sales Manager",
+   "ort": "Fribourg / Lausanne",
+   "kanton": "FR",
+   "quelle": "jobs.ch",
+   "quelle_id": "Sefar Group",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/87a37a2b-8418-4eed-aa90-68c48f19955c/",
+   "publiziert": "",
+   "prio": "2",
+   "teil": "1",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "sefar|sales manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "omya|corporate development manager": {
+   "firma": "Omya (Schweiz)",
+   "titel": "Corporate Development Manager",
+   "ort": "Oftringen",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Corporate Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/a0a3e3bc-5b25-454f-b08b-42ed55964e9f/",
+   "publiziert": "2026-07-13",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "STARK",
+   "consulting": "JA",
+   "notiz": "ABGELAUFEN (10.09. bestaetigt). Firma fehlt in der Zielliste, Workday-Portal, Alert dort einrichten",
+   "key": "omya|corporate development manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "ruag|senior business development strategy manager air": {
+   "firma": "RUAG",
+   "titel": "Senior Business Development & Strategy Manager Air",
+   "ort": "Emmen",
+   "kanton": "LU",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/5d97f239-bed2-44b8-a0b5-6fa328f3c904/",
+   "publiziert": "2026-09-04",
+   "prio": "3",
+   "teil": "2",
+   "bewertung": "MOEGLICH",
+   "consulting": "NEIN",
+   "notiz": "Verlangt Industrieerfahrung statt Beratung; BWL-Weiterbildung fehlt formal; Aviatik fehlt",
+   "key": "ruag|senior business development strategy manager air",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "ruag|manager business development": {
+   "firma": "RUAG",
+   "titel": "Manager Business Development",
+   "ort": "Bern",
+   "kanton": "BE",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/40538795-fc78-4380-a9ee-a9dcfff0f526/",
+   "publiziert": "",
+   "prio": "3",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "ruag|manager business development",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "trafag|business development manager": {
+   "firma": "Trafag",
+   "titel": "Business Development Manager",
+   "ort": "Bubikon",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/06762ee5-0312-4216-a3c2-87ab2562cfad/",
+   "publiziert": "2026-08-05",
+   "prio": "3",
+   "teil": "2",
+   "bewertung": "MOEGLICH",
+   "consulting": "NEIN",
+   "notiz": "Auf der Seite als abgelaufen markiert; MSc Engineering verlangt (erfuellt); 30 Min ab Meilen",
+   "key": "trafag|business development manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "haeusler duggingen|head of sales leiter vertrieb": {
+   "firma": "Haeusler AG Duggingen",
+   "titel": "Head of Sales / Leiter Vertrieb",
+   "ort": "Duggingen",
+   "kanton": "BL",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Head of Sales",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/8414ff8b-dab8-4c97-9800-4d6f9790cd9e/",
+   "publiziert": "2026-07-31",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Mind. 5 Jahre Vertriebsleitung im Maschinenbau; GL-Posten; 40% Reisen",
+   "key": "haeusler duggingen|head of sales leiter vertrieb",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "wey|chief commercial officer": {
+   "firma": "Wey Group",
+   "titel": "Chief Commercial Officer",
+   "ort": "Unterengstringen",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Pricing",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/2477617b-7058-4ad8-8eaa-363fe541ee51/",
+   "publiziert": "2026-08-11",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "SCHWACH",
+   "consulting": "NEIN",
+   "notiz": "Mehrjaehrige kommerzielle Gesamtverantwortung, CEO-Berichtslinie",
+   "key": "wey|chief commercial officer",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "electrolux professional|business development laundry systems": {
+   "firma": "Electrolux Professional",
+   "titel": "Business Development Laundry Systems",
+   "ort": "Sursee",
+   "kanton": "LU",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/03a29944-e0b3-47cc-9877-c615dfb8c3ef/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "electrolux professional|business development laundry systems",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "mylife diabetes care|global market access manager pricing tender management": {
+   "firma": "mylife Diabetes Care",
+   "titel": "Global Market Access Manager Pricing & Tender Management",
+   "ort": "Burgdorf",
+   "kanton": "BE",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Pricing",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/87eb9a21-fbd2-432b-bbad-fae302c5def9/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "mylife diabetes care|global market access manager pricing tender management",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "ista swiss|product portfolio manager energy building solutions": {
+   "firma": "ista swiss",
+   "titel": "Product & Portfolio Manager Energy & Building Solutions",
+   "ort": "Oftringen",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Pricing",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/a99053ba-21fa-4809-8f59-717331857dbb/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "ista swiss|product portfolio manager energy building solutions",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "micro mobility systems|manager spare parts microlino": {
+   "firma": "Micro Mobility Systems",
+   "titel": "Manager Spare Parts Microlino",
+   "ort": "Kuesnacht",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Pricing",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/a3a19630-8200-4a0b-b33f-6338af27bbc9/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "micro mobility systems|manager spare parts microlino",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "g bianchi|business development manager aufbau retail": {
+   "firma": "G. Bianchi",
+   "titel": "Business Development Manager Aufbau Retail",
+   "ort": "Zufikon",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/060aebc6-e4a5-43e8-94d1-d53c5605f7c8/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "g bianchi|business development manager aufbau retail",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "biomed|head of sales otc": {
+   "firma": "Biomed",
+   "titel": "Head of Sales OTC",
+   "ort": "Duebendorf",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Head of Sales",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/a118a956-4650-4aa6-aad0-616e6ca60e45/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Pharma",
+   "key": "biomed|head of sales otc",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "oettinger davidoff|area sales manager partner markets and travel retail emeaa": {
+   "firma": "Oettinger Davidoff",
+   "titel": "Area Sales Manager Partner Markets and Travel Retail EMEAA",
+   "ort": "Basel",
+   "kanton": "BS",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Pricing",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/7e90391b-04db-44e6-83b2-370aff4581f5/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "",
+   "key": "oettinger davidoff|area sales manager partner markets and travel retail emeaa",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "knecht|leiter in strategie geschaeftsentwicklung": {
+   "firma": "Knecht Gruppe",
+   "titel": "Leiter/in Strategie & Geschaeftsentwicklung",
+   "ort": "Windisch",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Leiter Strategie",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/166e8ec7-c448-4592-a597-f07b8e911f1e/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Nicht-Industrie: Versicherungsbroker",
+   "key": "knecht|leiter in strategie geschaeftsentwicklung",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "smg swiss marketplace|head of sales real estate": {
+   "firma": "SMG Swiss Marketplace Group",
+   "titel": "Head of Sales Real Estate",
+   "ort": "Zuerich",
+   "kanton": "ZH",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Head of Sales",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/57c07acc-62bc-4896-bbad-0946bf1622eb/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Nicht-Industrie",
+   "key": "smg swiss marketplace|head of sales real estate",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "dsv air sea|business development manager": {
+   "firma": "DSV Air & Sea",
+   "titel": "Business Development Manager",
+   "ort": "Basel",
+   "kanton": "BS",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/14d5111c-bbee-47e4-a413-849e2116dff1/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Nicht-Industrie: Logistik",
+   "key": "dsv air sea|business development manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "brack alltron|business development manager physical ai robotics": {
+   "firma": "Brack.Alltron",
+   "titel": "Business Development Manager Physical AI / Robotics",
+   "ort": "Maegenwil",
+   "kanton": "AG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/748d8c09-6c2f-4077-95e8-b8e75f3664b8/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Nicht-Industrie: Handel",
+   "key": "brack alltron|business development manager physical ai robotics",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  },
+  "erc distribution|business development manager": {
+   "firma": "ERC Distribution",
+   "titel": "Business Development Manager",
+   "ort": "Zug",
+   "kanton": "ZG",
+   "quelle": "jobs.ch",
+   "quelle_id": "Stichwort: Business Development",
+   "url": "https://www.jobs.ch/de/stellenangebote/detail/aeb3e370-3640-4605-8e7d-96d4cba2ef1e/",
+   "publiziert": "",
+   "prio": "—",
+   "teil": "2",
+   "bewertung": "",
+   "consulting": "",
+   "notiz": "Nicht-Industrie: IT-Distribution",
+   "key": "erc distribution|business development manager",
+   "erstmals": "2026-09-10",
+   "zuletzt": "2026-09-10",
+   "status": "offen",
+   "laeufe_gesehen": 1
+  }
+ },
+ "quellen": {
+  "ABB": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Hitachi Energy": {
+   "anzahl": 64,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Holcim": {
+   "anzahl": 35,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Liebherr": {
+   "anzahl": 10,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Schindler": {
+   "anzahl": 114,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "SGS": {
+   "anzahl": 4,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Hilti": {
+   "anzahl": null,
+   "ok": "",
+   "letzter_fehler": "2026-09-10"
+  },
+  "Swatch Group": {
+   "anzahl": 300,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Clariant": {
+   "anzahl": 109,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stadler Rail": {
+   "anzahl": 384,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Sonova": {
+   "anzahl": 399,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Mettler-Toledo": {
+   "anzahl": 38,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Staeubli International": {
+   "anzahl": 23,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "ALSTOM (Schweiz)": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Belimo": {
+   "anzahl": 7,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Daetwyler": {
+   "anzahl": 38,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "VAT Group": {
+   "anzahl": 165,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Bossard": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Burckhardt Compression": {
+   "anzahl": 30,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Accelleron": {
+   "anzahl": 8,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Landis+Gyr": {
+   "anzahl": 48,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Tecan": {
+   "anzahl": 38,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "HUBER+SUHNER": {
+   "anzahl": 47,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Ivoclar Group": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Rieter": {
+   "anzahl": 12,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "maxon group": {
+   "anzahl": 10,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Komax": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Baumer Group": {
+   "anzahl": 60,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Interroll": {
+   "anzahl": 43,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Meier Tobler": {
+   "anzahl": 41,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Kistler Gruppe": {
+   "anzahl": 19,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Reishauer": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Sensirion": {
+   "anzahl": 17,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Ferag (WRH)": {
+   "anzahl": 6,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Angst+Pfister": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Haag-Streit": {
+   "anzahl": 9,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Bruker Switzerland (BioSpin)": {
+   "anzahl": 4,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Santrade (Sandvik)": {
+   "anzahl": null,
+   "ok": "",
+   "letzter_fehler": "2026-09-10"
+  },
+  "Amcor": {
+   "anzahl": 11,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Sika": {
+   "anzahl": 8,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "STMicroelectronics": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Alcon": {
+   "anzahl": 5,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Garmin": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Georg Fischer (GF)": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Logitech": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Endress+Hauser": {
+   "anzahl": 72,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Sulzer": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Geberit": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Bucher Industries": {
+   "anzahl": 14,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Buehler Group": {
+   "anzahl": 80,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Kardex": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "HOERBIGER Holding": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "ams-OSRAM": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "SFS Group": {
+   "anzahl": 11,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "SIG Group": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "dormakaba": {
+   "anzahl": 9,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "UNITED GRINDING Group": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Ammann Group": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Forbo": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Hamilton Bonaduz": {
+   "anzahl": 37,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Schweiter Technologies": {
+   "anzahl": 7,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Ypsomed": {
+   "anzahl": 10,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Zehnder Group": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Phoenix Mecano": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Jura Elektroapparate": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Feintool": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "SAUTER Group": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Arbonia": {
+   "anzahl": 52,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Cicor": {
+   "anzahl": 15,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Bystronic": {
+   "anzahl": 8,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "V-ZUG": {
+   "anzahl": 48,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "INFICON": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "medmix": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Beyond Gravity": {
+   "anzahl": 11,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Weidmann Holding (WICOR)": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "SKAN Group": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Sefar Group": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Gurit": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Ascom": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Guedel Group": {
+   "anzahl": 6,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "u-blox": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Zuend Systemtechnik": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Leister": {
+   "anzahl": 1,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Uster Technologies": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Bruderer": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Hunkeler": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Leica Geosystems": {
+   "anzahl": 3,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Everllence Schweiz": {
+   "anzahl": 0,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Glencore": {
+   "anzahl": 2,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "MET Group": {
+   "anzahl": 6,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Corporate Development": {
+   "anzahl": 307,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Head of Strategy": {
+   "anzahl": 143,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Leiter Strategie": {
+   "anzahl": 97,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Strategische Projekte": {
+   "anzahl": 425,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Post Merger Integration": {
+   "anzahl": 14,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Mergers Acquisitions": {
+   "anzahl": 20,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Business Development": {
+   "anzahl": 1242,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Head of Sales": {
+   "anzahl": 101,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  },
+  "Stichwort: Pricing": {
+   "anzahl": 191,
+   "ok": "2026-09-10",
+   "letzter_fehler": ""
+  }
+ }
+}

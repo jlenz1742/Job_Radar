@@ -1,0 +1,46 @@
+# ENTWURF — ungetestet. Deckt nur den Mail-Weg ab (kein Scraping).
+name: Job-Radar
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-5'      # werktags 07:00 Schweizer Zeit (Sommerzeit)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -r requirements.txt
+
+      - name: Alert-Mails auslesen
+        env:
+          IMAP_USER: ${{ secrets.IMAP_USER }}
+          IMAP_PASS: ${{ secrets.IMAP_PASS }}
+        run: python parser/mail.py --seit 1 --out lauf.json
+
+      - name: Einlesen und auswerten
+        run: |
+          python radar.py ingest lauf.json | tee lauf.log
+          python radar.py excel Job_Radar.xlsx
+
+      - name: Zustand zurueckschreiben
+        run: |
+          git config user.name  "job-radar"
+          git config user.email "actions@github.com"
+          git add state.json Job_Radar.xlsx
+          git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d): $(grep -o 'neu [0-9]*' lauf.log | head -1)"
+          git push
+
+      # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen.
+      # Stilles Nichtstun ist der gefaehrlichste Fehlerfall.
+      - name: Quellen-Waechter
+        run: grep -q '!!' lauf.log && exit 1 || exit 0

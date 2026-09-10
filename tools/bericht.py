@@ -31,6 +31,13 @@ sys.path.insert(0, HERE)
 from radar import radius
 
 TAGE_UEBERSICHT = 5
+# Der Erstlauf (10.09.2026) hat den kompletten damaligen Bestand mit
+# erstmals=2026-09-10 importiert -- das sind keine "neuen" Funde, nur ein
+# einmaliger Bootstrap. Ohne diesen Stichtag wuerde die Uebersicht 5 Tage
+# lang wieder alle ~1000 Bestandsjobs als "neu" zeigen, weil sich
+# `erstmals` nie aendert. Alles an oder vor diesem Datum zaehlt deshalb
+# nie als neu -- ab dem 11.09. filtert nur noch TAGE_UEBERSICHT.
+BOOTSTRAP_STICHTAG = date(2026, 9, 10)
 CLAUDE_MODELL = "claude-sonnet-5"
 # NUR ein Schutz gegen Kosten/Kontext-Explosion an einem entgleisten Tag
 # (z.B. ein Erstlauf mit hunderten "neuen" Jobs). Im Normalbetrieb (ein
@@ -39,16 +46,18 @@ CLAUDE_MODELL = "claude-sonnet-5"
 # Kandidaten verschwinden lassen.
 SICHERHEITSDECKEL = 250
 
-def _vor_n_tagen(datum_str, tage):
+def _ist_neu(datum_str, tage):
     try:
         d = date.fromisoformat(datum_str)
     except (ValueError, TypeError):
         return False
+    if d <= BOOTSTRAP_STICHTAG:
+        return False  # Erstlauf-Bestand, kein echter Neufund
     return d >= date.today() - timedelta(days=tage)
 
 def neue_jobs(state, tage=TAGE_UEBERSICHT):
     jobs = [j for j in state["jobs"].values()
-            if j.get("status") != "weg" and _vor_n_tagen(j.get("erstmals"), tage)]
+            if j.get("status") != "weg" and _ist_neu(j.get("erstmals"), tage)]
     jobs.sort(key=lambda j: (j.get("erstmals", ""), j.get("firma", "")), reverse=True)
     return jobs
 

@@ -1,10 +1,9 @@
-# ENTWURF — ungetestet. Deckt nur den Mail-Weg ab (kein Scraping).
 name: Job-Radar
 
 on:
   schedule:
     - cron: '0 5 * * 1-5'      # werktags 07:00 Schweizer Zeit (Sommerzeit)
-  workflow_dispatch:
+  workflow_dispatch:            # manuell ausloesbar, z.B. zum Testen
 
 permissions:
   contents: write
@@ -21,26 +20,42 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Alert-Mails auslesen
+      # Braucht ein echtes Netzwerk ohne HTTPS-Tunnel-Proxy -- lief in der
+      # Entwicklungs-Sandbox deshalb nur mit --kein-js. Auf einem GitHub-
+      # Actions-Runner (kein Proxy) sollte das kein Problem sein.
+      - run: playwright install --with-deps chromium
+
+      - name: Karriereseiten + jobs.ch abrufen
+        run: python abruf.py run --prio 1 --pause 1 | tee abruf.log
+
+      - name: Alert-Mails auslesen (nur wenn Secrets gesetzt sind)
         env:
           IMAP_USER: ${{ secrets.IMAP_USER }}
           IMAP_PASS: ${{ secrets.IMAP_PASS }}
-        run: python parser/mail.py --seit 1 --out lauf.json
-
-      - name: Einlesen und auswerten
         run: |
-          python radar.py ingest lauf.json | tee lauf.log
-          python radar.py excel Job_Radar.xlsx
+          if [ -z "$IMAP_USER" ] || [ -z "$IMAP_PASS" ]; then
+            echo "IMAP_USER/IMAP_PASS nicht gesetzt -- Mail-Schritt wird übersprungen."
+            echo "Secrets anlegen unter: Repo-Settings -> Secrets and variables -> Actions"
+          else
+            python parser/mail.py --seit 2 --out lauf_mail.json
+            python radar.py ingest lauf_mail.json | tee -a abruf.log
+          fi
+
+      - name: Excel neu bauen
+        run: python radar.py excel Job_Radar.xlsx
 
       - name: Zustand zurueckschreiben
         run: |
           git config user.name  "job-radar"
           git config user.email "actions@github.com"
-          git add state.json Job_Radar.xlsx
-          git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d): $(grep -o 'neu [0-9]*' lauf.log | head -1)"
+          git add state.json Job_Radar.xlsx laeufe/
+          git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d)"
           git push
 
       # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen.
       # Stilles Nichtstun ist der gefaehrlichste Fehlerfall.
       - name: Quellen-Waechter
-        run: grep -q '!!' lauf.log && exit 1 || exit 0
+        run: |
+          echo "--- Fehlerhafte Quellen dieses Laufs ---"
+          grep '!!' abruf.log || echo "(keine)"
+          ! grep -q '!!' abruf.log

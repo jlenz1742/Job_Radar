@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  issues: write        # fuer die taegliche Zusammenfassung als Issue
 
 jobs:
   radar:
@@ -51,17 +50,13 @@ jobs:
           git diff --staged --quiet || git commit -m "Lauf $(date -u +%Y-%m-%d)"
           git push
 
-      # Uebersicht (neue Jobs, letzte 3 Tage) + Shortlist (Claude-Bewertung
-      # der vorgefilterten Kandidaten gegen Jans Profil aus CLAUDE.md) als
-      # GitHub Issue. Eigener Schritt, eigenes try/except im Skript -- ein
-      # API-Fehler hier soll den Lauf nicht rot machen, der Kern (Daten
-      # abrufen + committen) ist zu dem Zeitpunkt schon durch.
-      - name: Taegliche Zusammenfassung
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python tools/bericht.py
+      # Uebersicht+Shortlist als GitHub Issue laeuft NICHT hier, sondern ueber
+      # eine separate Claude-Code-Routine (kein ANTHROPIC_API_KEY-Secret
+      # noetig -- die Routine nutzt die bestehende Claude-Session/den
+      # bestehenden Zugang statt separat abgerechneter API-Calls). Siehe
+      # README "Taegliche Zusammenfassung". tools/bericht.py bleibt im Repo
+      # fuer lokale Tests/als Referenz, wird aber vom Workflow nicht
+      # aufgerufen.
 
       # Der Lauf muss SICHTBAR scheitern, wenn Quellen ausfallen -- aber nur
       # bei NEUEN Fehlern. Ein paar Quellen sind dauerhaft durch Bot-Abwehr

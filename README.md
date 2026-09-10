@@ -100,22 +100,17 @@ mehreren echten Läufen (10.09.2026). Ablauf:
 2. Alert-Mails auslesen (`parser/mail.py`) — läuft immer mit, ein
    IMAP-Fehler bricht den restlichen Lauf nicht ab
 3. `Job_Radar.xlsx` neu bauen, `state.json` + Excel + `laeufe/`-Rohdaten committen
-4. **Tägliche Zusammenfassung** (`tools/bericht.py`) als GitHub Issue:
-   Übersicht aller neuen Stellen der letzten 5 Tage + eine von der Claude
-   API bewertete Shortlist der vielversprechendsten, ohne Obergrenze
-   (siehe unten)
-5. Quellen-Wächter: schlägt nur fehl, wenn eine NEUE, unbekannte Quelle
+4. Quellen-Wächter: schlägt nur fehl, wenn eine NEUE, unbekannte Quelle
    ausfällt (bekannte Bot-Abwehr-Fälle stehen in `daten/bekannte_fehler.txt`)
 
 Nötige Secrets (Repo-Settings → Secrets and variables → Actions):
 
 - `IMAP_USER` — jan.jobradar@gmail.com
 - `IMAP_PASS` — Google-App-Passwort
-- `ANTHROPIC_API_KEY` — für die Shortlist-Bewertung in `tools/bericht.py`
 
-Fehlt eines davon, degradiert der jeweilige Schritt sauber (Mail-Fehler
-sichtbar im Log, Shortlist fällt weg, Übersicht bleibt trotzdem im Issue) —
-nichts davon bricht den ganzen Lauf ab.
+Optional (läuft der Lauf auch ohne — Mail-Fehler sind sichtbar im Log,
+brechen aber nichts ab). Die tägliche Zusammenfassung läuft **nicht**
+hier, siehe nächster Abschnitt.
 
 **Sicherheitshinweis zum App-Passwort:** Es gewährt vollen Zugriff auf das
 jobradar-Postfach. Weil das Konto ausschliesslich für diesen Zweck
@@ -123,31 +118,24 @@ existiert und keine private Korrespondenz enthält, ist das Risiko begrenzt
 — aber es ist eine bewusste Entscheidung, keine Formalie. Niemals das
 Passwort des privaten Kontos verwenden.
 
-## tools/bericht.py — tägliche Zusammenfassung
+## Tägliche Zusammenfassung — über eine Claude-Routine, nicht die Action
 
-Liest `state.json`, filtert Jobs mit `erstmals` in den letzten 5 Tagen
-(**ungefiltert** — das ist die Übersicht) und schickt **alle** davon an
-die Claude API zur inhaltlichen Bewertung (STARK/MÖGLICH + Begründung).
-Bewusst **kein Keyword-Vorfilter** — der würde genau die Stellen
-riskieren zu verschlucken, die die Shortlist finden soll, weil ein Titel
-ungewöhnlich formuliert ist. Die Shortlist hat **keine feste
-Obergrenze**: 2 echte Treffer geben 2 Einträge, 20 geben 20 — nie
-aufgefüllt, wenn weniger passen, nie künstlich gekürzt, wenn mehr passen.
-`SICHERHEITSDECKEL` (250) in `tools/bericht.py` ist nur ein Schutz gegen
-einen entgleisten Lauf (z.B. Hunderte "neue" Jobs an einem einzelnen
-Tag), keine Auswahl-Grenze — greift er, steht das sichtbar im Issue.
-Ergebnis: ein GitHub Issue "Job-Radar — <Datum>".
+Übersicht (neue Jobs, letzte 5 Tage, ungefiltert) + Shortlist (jeder neue
+Job einzeln gegen `CLAUDE.md` bewertet, STARK/MÖGLICH + Begründung,
+**keine feste Obergrenze**, nie aufgefüllt) als GitHub Issue
+"Job-Radar — <Datum>".
 
-Ohne `ANTHROPIC_API_KEY` erscheint die Übersicht trotzdem, nur ohne
-Shortlist-Abschnitt (mit Hinweis warum). Lokal testen:
+Das läuft bewusst **nicht** als Schritt im GitHub-Workflow, sondern über
+eine geplante Claude-Code-Routine (Zeitplan werktags, kurz nach dem
+Actions-Lauf) — kein `ANTHROPIC_API_KEY`-Secret nötig, weil die
+Bewertung über die ohnehin laufende Claude-Session passiert statt über
+separat abgerechnete API-Calls. Kein Keyword-Vorfilter, damit keine
+Stelle durch ein starres Python-Raster verloren geht, bevor sie überhaupt
+gesehen wird — jeder Job wird einzeln gelesen.
 
-```bash
-ANTHROPIC_API_KEY=... python tools/bericht.py   # legt ein echtes Issue an!
-```
-
-Ohne `GITHUB_TOKEN`/`GITHUB_REPOSITORY` wird kein Issue angelegt, das
-Markdown landet stattdessen auf der Konsole — so lässt sich der Bericht
-gefahrlos lokal probelesen.
+`tools/bericht.py` bleibt im Repo für lokale Tests/als Referenz
+(inkl. der ursprünglichen API-basierten Variante, falls später doch
+gewünscht) — der Workflow ruft es nicht mehr auf.
 
 ## abruf.py — der eigenständige Abruf (kein Agent nötig)
 

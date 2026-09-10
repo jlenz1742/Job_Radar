@@ -149,16 +149,18 @@ voller Historie und ohne dass jemand sie bauen muss.
   Quelle als Alarm sichtbar. Einschränkung: bisher existieren nur
   jobs.ch-"Alert wurde aktiv"-Mails, kein laufendes "N neue Jobs"-Digest —
   falls das Format davon abweicht, Mail dazulegen statt zu raten.
-- **`tools/bericht.py` — tägliche Zusammenfassung als GitHub Issue.**
-  Übersicht (neue Jobs, letzte 5 Tage, ungefiltert) + Shortlist: JEDER
-  neue Job geht direkt an die Claude API (kein Keyword-Vorfilter mehr —
-  Jan will nichts durch ein starres Raster verlieren), Bewertung
-  inhaltlich gegen das Profil oben, **ohne feste Obergrenze**, nie
-  aufgefüllt. `SICHERHEITSDECKEL` (250) ist nur ein Schutz gegen einen
-  entgleisten Lauf, keine Auswahl-Grenze. Braucht `ANTHROPIC_API_KEY` als
-  Secret; ohne das erscheint die Übersicht trotzdem, nur ohne Shortlist.
-  Modell: `claude-sonnet-5` — bei einer Modellumbenennung auf
-  Anthropic-Seite hier nachziehen.
+- **Tägliche Zusammenfassung als GitHub Issue läuft über eine
+  Claude-Code-Routine, NICHT über den GitHub-Workflow.** Übersicht (neue
+  Jobs, letzte 5 Tage, ungefiltert) + Shortlist: JEDER neue Job wird
+  einzeln von Claude gegen das Profil oben bewertet (kein Keyword-Vorfilter
+  — Jan will nichts durch ein starres Raster verlieren), **ohne feste
+  Obergrenze**, nie aufgefüllt. Kein `ANTHROPIC_API_KEY` nötig, weil die
+  Bewertung direkt in der Routine-Session passiert statt über einen
+  separat abgerechneten API-Call — Grund: Secrets-Einrichtung (Google-
+  App-Passwort, Anthropic-Billing) war Jan zu viel Setup-Aufwand für den
+  Start. `tools/bericht.py` (die urspruengliche API-basierte Variante)
+  bleibt im Repo als Referenz/fuer lokale Tests, wird aber vom Workflow
+  nicht mehr aufgerufen.
 - **Karriereseiten- und jobs.ch-Abruf laeuft jetzt komplett über GitHub
   Actions** (`.github/workflows/radar.yml`, werktags 07:00 Schweizer Zeit
   + `workflow_dispatch` für manuelle Läufe) — kein Agent mehr nötig für

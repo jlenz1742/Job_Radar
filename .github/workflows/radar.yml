@@ -1,11 +1,10 @@
 name: Job-Radar
 
 on:
-  schedule:
-    - cron: '5 7 * * *'        # jeden Tag ~09:05 Schweizer Zeit (Sommerzeit, UTC+2)
-    # Bewusst nicht exakt zur vollen Stunde: GitHub warnt, dass "schedule"-
-    # Trigger genau dann durch hohe Last verzoegert oder ausgelassen werden
-    # koennen (beobachtet am 11.09.: Lauf kam >39 Min. zu spaet).
+  # Automatischer "schedule"-Trigger bewusst AUSGESCHALTET (11.09.) --
+  # der Gesamtansatz (Karriereseiten-Abruf + tägliche Zusammenfassung per
+  # Claude-Routine) wird gerade überarbeitet, u.a. wegen des Orts-Problems
+  # bei globalen Konzern-Feeds. Bis dahin läuft hier nichts von selbst.
   workflow_dispatch:            # manuell ausloesbar, z.B. zum Testen
 
 permissions:
